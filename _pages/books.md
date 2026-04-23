@@ -2,7 +2,7 @@
 layout: book-shelf
 title: bookshelf
 permalink: /books/
-nav: false
+nav: true
 collection: books
 ---
 
@@ -11,3 +11,23 @@ collection: books
 > -- Carl Sagan, Cosmos, Part 11: The Persistence of Memory (1980)
 
 ## Books that I am reading, have read, or will read
+
+### Currently Reading & To-Read
+* **The Last Lecture** – *Randy Pausch*
+* **A Brief History of Time** – *Stephen Hawking*
+
+### Personal Development & Growth
+* **The Productivity Project** – *Chris Bailey* 
+* **Youth is Worth How Much?** – *Rosie Nguyen* 
+* **Trended to Grow After Thousands of Struggles** – *Kim Rando*
+* **Youth, It's Painful** – *Kim Rando*
+
+### Technical & Research (Current Study)
+* **LISP (3rd Edition)** – *Patrick Henry Winston & Berthold Klaus Paul Horn*
+* **Building Problem Solvers** – *Kenneth D. Forbus & Johan de Kleer*
+
+### Literary Favorites
+* **The Alchemist** – *Paulo Coelho*
+* **My Sweet Orange Tree** – *José Mauro de Vasconcelos*
+* **Kafka on the Shore** – *Haruki Murakami*
+* **Genius on the Left, Lunatic on the Right** – *Gao Ming*
