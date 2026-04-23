@@ -12,11 +12,11 @@ collection: books
 
 ## Books that I am reading, have read, or will read
 
-### Currently Reading & To-Read
+### Currently Reading
 * **The Last Lecture** – *Randy Pausch*
 * **A Brief History of Time** – *Stephen Hawking*
 
-### Personal Development & Growth
+### Personal Development and Growth
 * **The Productivity Project** – *Chris Bailey* 
 * **Youth is Worth How Much?** – *Rosie Nguyen* 
 * **Trended to Grow After Thousands of Struggles** – *Kim Rando*
