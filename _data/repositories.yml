@@ -5,7 +5,7 @@ repo_description_lines_max: 3
 
 github_repos:
   - minhdieuvu08/lisp-foundations
-  - minhdieuvu08/Agents
+  - minhdieuvu08/LLM-Augmented-RL
   - minhdieuvu08/Mental_Attention_States_Classification_Using_EEG_Data 
   - minhdieuvu08/algorithms-cpp  
   - minhdieuvu08/LEFT
