@@ -7,7 +7,7 @@ subtitle: "" # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true # crops the image to make it circular
   more_info: >
     <p>Faculty of Mathematics & Computer Science</p>
     <p>VNUHCM - University of Science</p>
@@ -27,10 +27,10 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a senior student at **VNUHCM - University of Science**, majoring in **Mathematical Methods in Computer Science**. My academic background in the Faculty of Mathematics and Computer Science has equipped me with a strong mathematical foundation for AI research.
+I am a senior student at **VNUHCM - University of Science**, majoring in **Mathematics and Computer Science**. My academic background provides a rigorous mathematical foundation that I leverage to solve complex problems in Artificial Intelligence.
 
-Currently, I am an **AI Engineer Intern at DIZIM**, where I apply deep learning techniques to practical applications. For my graduation thesis, I am focusing on the **Instance Segmentation of Medical Equipment in Hospital Environments**. My research is integrated into a larger collaborative project on hospital scene understanding, and I am a co-author of an extended manuscript (currently under review) that introduces a large-scale dataset with 40 object classes.
+Currently, I am an **AI Engineer Intern** at **DIZIM**, focusing on applying deep learning to real-world challenges. For my graduation thesis, I am developing an **Instance Segmentation framework for medical equipment** in hospital environments, aiming to enhance the perception and robustness of autonomous systems in healthcare settings.
 
-My specific focus within this initiative is to optimize the detection and segmentation of critical medical assets, aiming to enhance the perception and robustness of autonomous systems in complex healthcare settings.
+Beyond Deep Learning, I am deeply interested in the foundations of computer science. I am currently exploring **Functional Programming** through **Common Lisp**, which has reshaped my perspective on recursive logic and formal data structures.
 
-I am always open to discussing AI research or potential collaborations. Feel free to reach out!
+I am always open to discussing AI research, mathematical modeling, or potential collaborations. Feel free to reach out!
