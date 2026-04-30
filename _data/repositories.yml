@@ -1,14 +1,13 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - minhdieuvu08
 
-repo_description_lines_max: 2
+repo_description_lines_max: 3
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - minhdieuvu08/lisp-foundations
+  - minhdieuvu08/Agents
+  - minhdieuvu08/Mental_Attention_States_Classification_Using_EEG_Data 
+  - minhdieuvu08/algorithms-cpp  
+  - minhdieuvu08/LEFT
+  - minhdieuvu08/minhdieuvu08.github.io 
+  - ultralytics/ultralytics
