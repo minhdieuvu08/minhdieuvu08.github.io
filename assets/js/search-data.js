@@ -40,13 +40,16 @@ ninja.data = [{
         },{id: "news-started-as-an-ai-engineer-intern-at-dizim-building-a-fashion-advice-chatbot-with-rag-on-aws-bedrock-and-amazon-opensearch",
           title: 'Started as an AI Engineer Intern at DIZIM, building a fashion-advice chatbot with...',
           description: "",
+          section: "News",},{id: "news-attended-the-spring-school-on-statistics-and-machine-learning-at-the-vietnam-institute-for-advanced-study-in-mathematics-viasm",
+          title: 'Attended the Spring School on Statistics and Machine Learning at the Vietnam Institute...',
+          description: "",
           section: "News",},{id: "news-completed-the-io-research-spring-school-2025-14-modules-and-20-hours-on-research-methodology-academic-writing-and-research-ethics-in-computer-science",
           title: 'Completed the IO Research Spring School 2025 — 14 modules and 20+ hours...',
           description: "",
           section: "News",},{id: "news-invited-as-the-youngest-panelist-to-the-io-scholar-s-women-in-engineering-and-it-workshop-alongside-senior-policy-officers-and-phd-scholars-from-australia-and-vietnam",
           title: 'Invited as the youngest panelist to The IO Scholar’s Women in Engineering and...',
           description: "",
-          section: "News",},{id: "news-published-the-write-up-of-my-academic-seminar-research-at-vnuhcm-us-skin-lesion-detection-on-total-body-photography-a-yolov8m-detector-reaching-0-666-map-50-completed-ahead-of-my-undergraduate-thesis",
+          section: "News",},{id: "news-published-the-write-up-of-my-academic-seminar-research-at-vnuhcm-us-skin-lesion-detection-on-total-body-photography-a-yolov8m-detector-reaching-0-666-map-50",
           title: 'Published the write-up of my academic seminar research at VNUHCM–US: skin-lesion detection on...',
           description: "",
           section: "News",},{id: "projects-algorithms-in-c",
@@ -76,7 +79,7 @@ ninja.data = [{
               window.location.href = "/projects/llm-augmented-rl/";
             },},{id: "projects-instance-segmentation-for-medical-equipment",
           title: 'Instance Segmentation for Medical Equipment',
-          description: "Undergraduate thesis — an instance-segmentation framework for medical equipment in hospital environments, aimed at robust perception for autonomous systems in healthcare.",
+          description: "Undergraduate thesis — benchmarking 30+ instance-segmentation configurations on hospital equipment, peaking at 57.4 mAP with Hybrid Task Cascade and ConvNeXtv2-L.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/medical-equipment-instance-segmentation/";
             },},{
