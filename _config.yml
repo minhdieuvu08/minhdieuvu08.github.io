@@ -7,9 +7,10 @@ first_name: Minh
 middle_name: Dieu
 last_name: Vu
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Email is the surest way to reach me — I read everything, and I reply to anything
+  about research collaboration, computer vision, or reinforcement learning.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  B.S. Student in Math & CS @ VNU-HCM | AI Engineer Intern @ DIZIM | Researching Computer Vision
+  B.S. Student in Math & CS @ VNUHCM-US | Researching Computer Vision & Reinforcement Learning | Former AI Engineer Intern @ DIZIM
 footer_text: >
   &copy; 2026 Vu Dieu Minh. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: AI Engineer, Computer Vision, Mathematical Methods, academic-website, portfolio-website # add your own keywords or leave empty
@@ -66,9 +67,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: https://minhdieuvu08.github.io/assets/img/og_image.png # The site-wide (default for all links) Open Graph preview image. Must be an absolute URL.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
