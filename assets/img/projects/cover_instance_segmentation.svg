@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Instance segmentation masks over hospital equipment silhouettes">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a1026" />
+      <stop offset="1" stop-color="#4a1636" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)" />
+  <g stroke="#fb7185" stroke-opacity="0.08" stroke-width="1">
+    <path d="M0 250H1200M0 500H1200" />
+    <path d="M300 0V750M600 0V750M900 0V750" />
+  </g>
+  <g>
+    <path d="M150 560 q -10 -190 70 -230 l 120 0 q 80 40 70 230 z" fill="#fb7185" fill-opacity="0.35" stroke="#fda4af" stroke-width="5" />
+    <rect x="196" y="250" width="128" height="86" rx="10" fill="#fda4af" fill-opacity="0.55" />
+    <circle cx="180" cy="590" r="26" fill="#fda4af" fill-opacity="0.5" />
+    <circle cx="330" cy="590" r="26" fill="#fda4af" fill-opacity="0.5" />
+  </g>
+  <g>
+    <path d="M520 600 l 0 -300 q 0 -40 40 -40 l 130 0 q 40 0 40 40 l 0 300 z" fill="#f472b6" fill-opacity="0.3" stroke="#f9a8d4" stroke-width="5" />
+    <rect x="556" y="300" width="98" height="140" rx="8" fill="#f9a8d4" fill-opacity="0.45" />
+    <path d="M556 480 h 98 M556 520 h 98" stroke="#f9a8d4" stroke-width="6" stroke-linecap="round" />
+  </g>
+  <g>
+    <path d="M880 610 l 0 -360 l 40 -40 l 160 0 l 0 400 z" fill="#c084fc" fill-opacity="0.28" stroke="#d8b4fe" stroke-width="5" />
+    <circle cx="980" cy="330" r="46" fill="#d8b4fe" fill-opacity="0.5" />
+    <path d="M900 470 h 160 M900 520 h 160 M900 570 h 120" stroke="#d8b4fe" stroke-width="6" stroke-linecap="round" stroke-opacity="0.7" />
+  </g>
+  <g font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="20" font-weight="700">
+    <rect x="150" y="286" width="112" height="32" rx="6" fill="#fda4af" />
+    <text x="164" y="309" fill="#2a1026">bed #1</text>
+    <rect x="520" y="222" width="150" height="32" rx="6" fill="#f9a8d4" />
+    <text x="534" y="245" fill="#2a1026">monitor #2</text>
+    <rect x="880" y="172" width="140" height="32" rx="6" fill="#d8b4fe" />
+    <text x="894" y="195" fill="#2a1026">trolley #3</text>
+  </g>
+</svg>
