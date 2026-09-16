@@ -2,10 +2,10 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Research in computer vision and reinforcement learning, plus the foundations I keep sharpening.
 nav: true
-nav_order: 3
-display_categories: [work, fun]
+nav_order: 1
+display_categories: [research, foundations]
 horizontal: false
 ---
 

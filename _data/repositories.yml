@@ -4,10 +4,10 @@ github_users:
 repo_description_lines_max: 3
 
 github_repos:
-  - minhdieuvu08/lisp-foundations
+  - minhdieuvu08/itobos-lesion-detection
   - minhdieuvu08/LLM-Augmented-RL
-  - minhdieuvu08/Mental_Attention_States_Classification_Using_EEG_Data 
-  - minhdieuvu08/algorithms-cpp  
-  - minhdieuvu08/LEFT
-  - minhdieuvu08/minhdieuvu08.github.io 
+  - minhdieuvu08/lisp-foundations
+  - minhdieuvu08/Mental_Attention_States_Classification_Using_EEG_Data
+  - minhdieuvu08/algorithms-cpp
+  - minhdieuvu08/minhdieuvu08.github.io
   - ultralytics/ultralytics
