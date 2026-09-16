@@ -5,10 +5,11 @@ cv:
   location: Ho Chi Minh City, Vietnam
   image: prof_pic.jpg
   summary: >
-    B.S. student in Mathematical Methods in Computer Science at VNUHCM-US. 
-    Results-driven AI Engineer with hands-on experience in Computer Vision, 
-    Reinforcement Learning, and LLM architectures. Focused on developing robust 
-    AI systems through mathematical rigor and ethical research.
+    An AI Engineer with a robust mathematical foundation and hands-on expertise in
+    Computer Vision, LLM integration, and Reinforcement Learning. Proven ability to
+    benchmark state-of-the-art models and build practical, pipeline-driven AI
+    applications. Eager to apply my technical skills to solve business problems and
+    help develop new products.
 
   social_networks:
     - network: GitHub
@@ -49,37 +50,49 @@ cv:
           - Optimized model performance and data classification for real-world deployment.
     
     Projects:
+      - name: Instance Segmentation of Medical Equipment in Hospital Environments
+        summary: "*Graduation Thesis · July 2026 – present.* PyTorch, Cascade Mask R-CNN, HTC, YOLO, Vision Transformers."
+        start_date: 2026-07
+        end_date: present
+        highlights:
+          - Engineered and processed the HAMP dataset, specifically designed for detecting and segmenting medical equipment within complex hospital environments.
+          - Benchmarked state-of-the-art architectures (Cascade Mask R-CNN, HTC, Mask R-CNN, YOLOv8/v11) with modern backbones (e.g., ConvNeXt, PVT) across 30+ configurations to evaluate the accuracy-efficiency tradeoff.
+          - Achieved peak instance segmentation performance (mAP 57.4) using Hybrid Task Cascade with ConvNeXtv2-L, while analyzing FLOPs and FPS metrics for potential real-world healthcare deployment.
+
       - name: LLM-Guided Reinforcement Learning Agent
-        summary: Autonomous Atari Space Invaders agent using Tabular Q-Learning and Gemini API.
+        summary: "*December 2025.* Python, Gymnasium, Gemini API, Prompt Engineering."
         start_date: 2025-12
         end_date: 2025-12
         highlights:
-          - Integrated LLM-guided Reward Shaping to jump-start the agent's learning process.
-          - Python, Gymnasium, Gemini API.
+          - Engineered a robust pipeline integrating Google Gemini 2.5 API to dynamically generate programmatic heuristics (Reward Shaping), jump-starting the RL agent's learning process.
+          - Built a Semantic Feature Extraction module to process raw pixels into structured JSON (Scene Graphs), explicitly mitigating LLM spatial hallucinations and ensuring reliable API outputs.
+          - Combined Tabular Q-Learning with a Population-Based Training framework, resulting in a significant increase in both average score and win rate over baseline models.
+          - Designed custom data visualization pipelines using Matplotlib to effectively benchmark model performance and track heuristic accuracy.
 
-      - name: Mental Attention Classification (EEG)
-        summary: Classifying attention states using EEG signal processing and ML.
+      - name: Mental Attention Classification Using EEG Data
+        summary: "*December 2024.* Python."
         start_date: 2024-12
         end_date: 2024-12
         highlights:
-          - Extracted frequency-domain features from raw EEG data.
-          - Trained classifiers including SVM, Random Forest, and Neural Networks.
+          - Preprocessed raw EEG signals by extracting relevant channels and applying normalization techniques to ensure data consistency.
+          - Extracted time-domain and frequency-domain features (e.g., power spectral density, statistical metrics) to identify patterns across attention states.
+          - Trained and evaluated multiple classifiers (e.g., Logistic Regression, SVM, Random Forest, Neural Networks) using accuracy, precision, recall, and F1-score.
+          - Generated EEG signal plots, feature comparisons, confusion matrices, and ROC curves for model evaluation.
 
-    Volunteer:
+    Leadership & Activities:
       - company: The IO Scholar
-        position: Guest Panelist | Women in Engineering and IT
+        position: Panelist | Women in Engineering and IT Workshop
         location: Online (Vietnam and Australia)
         start_date: 2026-03
         end_date: 2026-03
         summary: >
-          Invited as the youngest panelist to a cross-border professional workshop 
-          celebrating Women in STEM, alongside senior policy officers, PhD, and Master 
+          Invited as the youngest panelist to a cross-border professional workshop
+          celebrating Women in STEM, alongside senior policy officers, PhD, and Master
           scholars from Australia and Vietnam.
         highlights:
-          - Shared personal research journey in Mathematics-Informatics and AI.
-          - Discussed overcoming Imposter Syndrome and "The Only Woman in the Room" syndrome in competitive programming environments.
-          - Provided insights on balancing rigorous academic thesis work with self-directed research in emerging AI technologies.
-          - Engaged in high-level discussions regarding the 14-17% gender gap in Australian/Vietnamese STEM workforce data and strategies for inclusion.
+          - Invited to share personal and academic experiences in Mathematical Methods in Informatics.
+          - Inspired female students by discussing career orientation, research in Computer Vision/LLMs, and overcoming gender-related challenges in tech.
+          - Panel discussion on integrating rigorous Math into modern AI development.
     
     # Awards:
     #   - title: Nobel Prize in Physics
@@ -168,9 +181,21 @@ cv:
         icon: fa-solid fa-robot
     
     Skills:
-      - name: Programming & Tools
+      - name: Programming Languages
         icon: fa-solid fa-code
-        keywords: "Python, C/C++, Common Lisp, Git"
+        keywords: "C/C++, C#, Python, Common Lisp"
+
+      - name: Mathematical & Statistical Tools
+        icon: fa-solid fa-square-root-variable
+        keywords: "Matlab, R, LaTeX"
+
+      - name: AI/ML Frameworks
+        icon: fa-solid fa-brain
+        keywords: "TensorFlow, PyTorch, scikit-learn"
+
+      - name: Developer Tools & Environments
+        icon: fa-solid fa-terminal
+        keywords: "Unix/Linux, Git/GitHub"
 
     Languages:
       - name: English

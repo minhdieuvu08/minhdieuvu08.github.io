@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Published the write-up of my academic seminar research at VNUHCM–US: [skin-lesion detection on total-body photography]({{ '/projects/itobos-lesion-detection/' | relative_url }}) — a YOLOv8m detector reaching 0.666 mAP@50, completed ahead of my undergraduate thesis.
+Published the write-up of my academic seminar research at VNUHCM–US: [skin-lesion detection on total-body photography]({{ '/projects/itobos-lesion-detection/' | relative_url }}) — a YOLOv8m detector reaching 0.666 mAP@50.

@@ -178,6 +178,10 @@ layout: default
               {% elsif section_title == 'References' %}
                 {% assign entries = section_entries %}
                 {% include cv/references.liquid %}
+              {% elsif section_title == 'Leadership & Activities' or section_title == 'Leadership and Activities' or section_title == 'Activities' %}
+                {% comment %} Experience-shaped entries (company/position/dates) under their own heading {% endcomment %}
+                {% assign entries = section_entries %}
+                {% include cv/experience.liquid %}
               {% else %}
                 <!-- Generic section -->
                 {% for entry in section_entries %}
