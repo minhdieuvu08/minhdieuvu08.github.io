@@ -54,7 +54,7 @@ cv:
           40 classes and 25,988 annotated instances, and benchmarks state-of-the-art instance and semantic
           segmentation architectures across high-performance backbones, peaking at **57.4% mAP**
           (HTC-ConvNeXtv2-L) and **75.0% mIoU** (Mask2Former-ConvNeXtv2-L). See also my
-          [undergraduate thesis]({{ '/projects/medical-equipment-instance-segmentation/' | relative_url }}).
+          [undergraduate thesis](/projects/medical-equipment-instance-segmentation/).
 
     Experience:
       - company: DIZIM
