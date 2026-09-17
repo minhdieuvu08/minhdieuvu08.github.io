@@ -1,30 +1,47 @@
 ---
 layout: page
 title: Skin Lesion Detection on Total-Body Photography
-description: Academic seminar research at VNUHCM–US — fine-tuning YOLOv8m to localise skin lesions in 3D total-body photography tiles (iToBoS 2024 challenge).
+description: Team seminar research at VNUHCM–US — benchmarking YOLO and Faster R-CNN families for skin-cancer screening on 3D total-body photography (iToBoS 2024).
 img: assets/img/projects/cover_itobos.svg
 importance: 1
 category: research
 github: https://github.com/minhdieuvu08/itobos-lesion-detection
 ---
 
-**Academic seminar research, Faculty of Mathematics & Computer Science, VNUHCM – University of Science.**
-This was my seminar project in the term preceding my
-[undergraduate thesis]({{ '/projects/medical-equipment-instance-segmentation/' | relative_url }}) —
-a first pass at medical-imaging detection that shaped the direction I then took into the thesis.
+**Academic seminar, Faculty of Mathematics and Computer Science, VNUHCM – University of Science ·
+completed January 2026.**
+*Deep Learning Approaches for Skin Cancer Detection and Segmentation* — a **three-person team project** with
+Nguyen Minh Man and Nguyen Ngoc Tuyet Nhi, supervised by M.Sc. Huynh Thanh Son.
 
-An object-detection study on the [iToBoS 2024 challenge](https://www.kaggle.com/competitions/itobos-2024-detection):
-given skin-region tiles cropped from reconstructed 3D avatars, localise every lesion on the patient's body.
+My contribution covered both detection paradigms: I ran the **YOLO experiments** end to end, and wrote the
+**Faster R-CNN implementation** that a teammate then trained. The
+[linked repository](https://github.com/minhdieuvu08/itobos-lesion-detection) holds the YOLO side only — the
+work itself finished in January 2026, though I pushed the code and write-up to GitHub in September.
+
+This was the term of work preceding my
+[undergraduate thesis]({{ '/projects/medical-equipment-instance-segmentation/' | relative_url }}), and my
+first exposure to detection in a medical-imaging setting.
+
+## The problem
+
+Melanoma is the minority of skin cancers but carries the fastest metastasis and the highest mortality, and
+prognosis depends heavily on how early it is caught. Conventional diagnosis needs a dermatologist and
+dermoscopy equipment — a bottleneck that makes population-scale screening impractical. Most AI training sets
+make the bottleneck worse rather than better: they are *lesion-centric* dermoscopic crops with the lesion
+centred in frame, discarding the surrounding skin context that real-world screening has to work with.
+
+The [iToBoS 2024 challenge](https://www.kaggle.com/competitions/itobos-2024-detection) inverts this. Images
+are high-resolution skin-region tiles extracted from **3D total-body photography (3D-TBP)** — context
+preserved, lesions wherever they happen to fall. The question the seminar asked: can modern object detectors
+screen skin in that setting, outside a specialist clinic?
 
 ## Data
 
-The dataset contains **16,954 PNG tiles from 100 patients**, recruited at Hospital Clinic Barcelona (51) and
-the University of Queensland, Brisbane (49). Images come from the VECTRA WB360 total-body photography system
-(92 synchronised cameras); each tile covers roughly **7 × 9 cm** of skin. Faces, tattoos, scars and jewellery
-were inpainted before release — a detail worth keeping in mind, since inpainted regions introduce textures that
-differ from naturally photographed skin.
-
-The official split is almost exactly even, and the positive/background balance is consistent across it:
+16,954 PNG tiles from 100 patients, recruited at Hospital Clinic Barcelona (51) and the University of
+Queensland, Brisbane (49), captured on the VECTRA WB360 system (92 synchronised cameras). Each tile covers
+roughly **7 × 9 cm** of skin, extracted from a reconstructed 3D avatar. Faces, tattoos, scars and jewellery
+were inpainted before release — worth remembering, since inpainted regions carry textures that real skin does
+not.
 
 | Split | Images | With lesions | Without | Positive rate |
 | --- | ---: | ---: | ---: | ---: |
@@ -32,27 +49,33 @@ The official split is almost exactly even, and the positive/background balance i
 | Test  | 8,481 | 6,750 | 1,731 | 79.59% |
 | **Total** | **16,954** | **13,473** | **3,481** | **79.47%** |
 
-The exploratory analysis in `overview.ipynb` works through the image split, the lesion annotations, and the
-clinical/acquisition metadata. Notebook outputs are cleared in the repository to avoid embedding medical images.
+## Benchmark
 
-## Model and results
+Both detection paradigms, one-stage and two-stage:
 
-YOLOv8m fine-tuned for 50 epochs on a single Tesla T4 — **4.57 hours** of training — evaluated on a held-out
-20% validation split of 1,695 images containing 5,814 annotated lesions.
+- **YOLO (v8, v9, v10)** — mAP@50 generally in the **0.66–0.75** band. The strongest result in this group came
+  from **YOLOv8-Small on an 8k-image subset at 1024px input: 0.4266 mAP@50-95** — higher than the larger
+  variants, which says the cleaner subset and the higher resolution mattered more than parameter count for
+  finding small, faint-bordered lesions. YOLOv8-Large reached 0.401 and YOLOv9-Medium 0.4137
+  (precision 0.7320, recall 0.6570).
+- **Faster R-CNN** — the standout was **RegNetX-800MF with Focal Loss: recall 0.7769, mAP@50 0.762,
+  mAP@50-95 0.403**. Focal Loss is doing exactly the job it was designed for here: down-weighting the
+  overwhelming majority of easy benign lesions so the model attends to the malignant minority. In screening,
+  recall is the metric that matters — a false positive costs a second look, a false negative can cost a
+  melanoma caught late.
 
-| Metric | Score |
-| --- | --- |
-| mAP@50 | **0.6658** |
-| mAP@50-95 | **0.3538** |
-| Precision | 0.6690 |
-| Recall | 0.5867 |
-| F1 | 0.6252 |
+The single-model write-up in the repository (YOLOv8m, 0.6658 mAP@50 / 0.3538 mAP@50-95, 4.57 hours on one
+Tesla T4) is my own run within this larger sweep.
 
-The fused model has 25.8M parameters and 78.7 GFLOPs, running at 23.4 ms per image on a T4.
+## What limited the results
 
-## Notes
+Overall mAP@50-95 sat in the 0.3–0.4 range, below what lesion-centric datasets like HAM10000 or ISIC report —
+and the gap is mostly the data, not the models. Severe class imbalance (predominantly benign), fabric
+occlusion whose patterns mimic lesions, variation in illumination and patient posture, and an average of 4–5
+lesions per image all push false positives and false negatives up together. Compute limits also ruled out a
+full ablation study, longer schedules, and test-time augmentation.
 
-Recall is the weaker half of the trade-off, which is the direction that matters least for a screening
-setting — a missed lesion costs more than a false positive that a clinician dismisses. Pushing recall
-without collapsing precision, and checking whether performance is stable across acquisition site and
-body part rather than only in aggregate, are the natural next steps.
+Identified next steps: systematic hyperparameter sweeps, dermatology-specific augmentation, class rebalancing
+or semi-supervised use of unlabelled regions, patient-level evaluation with a clinically motivated recall
+floor, and Vision Transformer or hybrid ViT–CNN architectures whose global attention suits wide-context
+tiles better than local convolutions.
