@@ -13,6 +13,6 @@ kaggle_id: minhdieuvu
 #scholar_userid: # your Google Scholar ID
 
 # custom_social: # can be any name here other than the ones already defined in the jekyll-socials plugin
-#   logo: https://www.alberteinstein.com/wp-content/uploads/2024/03/cropped-favicon-192x192.png # can be png, svg, jpg
+#   logo: /assets/img/favicon.png # can be png, svg, jpg
 #   title: Custom Social
-#   url: https://www.alberteinstein.com/
+#   url: https://example.com/
