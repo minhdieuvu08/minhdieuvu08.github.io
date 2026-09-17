@@ -3,6 +3,7 @@ layout: page
 title: Skin Lesion Detection on Total-Body Photography
 description: Team seminar research at VNUHCM–US, benchmarking YOLO and Faster R-CNN families for skin-cancer screening on 3D total-body photography (iToBoS 2024).
 img: assets/img/projects/cover_itobos.svg
+og_image: https://minhdieuvu08.github.io/assets/img/og/seminar.png # absolute URL required, metadata.liquid writes it verbatim
 importance: 1
 category: research
 github: https://github.com/minhdieuvu08/itobos-lesion-detection

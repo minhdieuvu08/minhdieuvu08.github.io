@@ -3,6 +3,7 @@ layout: page
 title: Instance Segmentation for Medical Equipment
 description: Bachelor's thesis, graded 9.5/10, benchmarking 42 instance-segmentation configurations on hospital scenes, then picking the one a robot can actually run.
 img: assets/img/projects/cover_instance_segmentation.svg
+og_image: https://minhdieuvu08.github.io/assets/img/og/thesis.png # absolute URL required, metadata.liquid writes it verbatim
 importance: 0
 category: research
 ---
