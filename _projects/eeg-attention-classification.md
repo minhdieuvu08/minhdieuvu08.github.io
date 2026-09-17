@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Mental Attention States from EEG
-description: Classifying focused, unfocused and drowsy states from raw EEG recordings — signal processing, feature engineering, and a comparison of classical and sequence models.
+description: Classifying focused, unfocused and drowsy states from raw EEG recordings, covering signal processing, feature engineering, and a comparison of classical and sequence models.
 img: assets/img/projects/cover_eeg.svg
 importance: 3
 category: research
@@ -21,14 +21,14 @@ computed.
 ## Features
 
 Spectral and statistical descriptors per channel and per window: Welch power spectral density across the
-standard EEG bands, plus skewness, kurtosis and entropy. Dimensionality is handled with PCA and FastICA —
+standard EEG bands, plus skewness, kurtosis and entropy. Dimensionality is handled with PCA and FastICA,
 ICA in particular because EEG channels are heavily mixed at the scalp and independent components separate
 sources better than variance-ranked ones. A graph view of inter-channel relationships (NetworkX + Louvain
 community detection) is used to inspect which channel groups move together.
 
 ## Models
 
-Classical baselines — SVM, logistic regression, random forest, k-NN — evaluated with stratified k-fold
-cross-validation, against sequence models (SimpleRNN and LSTM, Keras) that use the temporal structure the
+Classical baselines, namely SVM, logistic regression, random forest and k-NN, evaluated with stratified
+k-fold cross-validation, against sequence models (SimpleRNN and LSTM, Keras) that use the temporal structure the
 classical models discard. Scoring covers accuracy, precision, recall, F1 and confusion matrices, since the
 classes are not equally represented and accuracy alone would flatter the majority class.

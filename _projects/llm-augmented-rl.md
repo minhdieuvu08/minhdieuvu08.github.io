@@ -29,10 +29,10 @@ the sparse-reward problem directly:
 The more interesting direction. A population of 20 tabular Q-Learning agents is trained, with
 **Google Gemini** inserted into the loop:
 
-1. **Explore** — agents collect state-action data and discover relevant game states.
-2. **Consult** — a simplified `14 × 14` spatial grid of the environment is sent to the Gemini API.
-3. **Generate** — Gemini returns a Python function `heuristic_logic(grid_14x14)` encoding spatial reasoning rules.
-4. **Inject** — the heuristic labels "good" and "bad" actions for discovered states, and those biases are
+1. **Explore**: agents collect state-action data and discover relevant game states.
+2. **Consult**: a simplified `14 × 14` spatial grid of the environment is sent to the Gemini API.
+3. **Generate**: Gemini returns a Python function `heuristic_logic(grid_14x14)` encoding spatial reasoning rules.
+4. **Inject**: the heuristic labels "good" and "bad" actions for discovered states, and those biases are
    written straight into the Q-table.
 
 The shaping rules are then applied across the whole agent population, which cuts short the random-walk
@@ -40,8 +40,8 @@ phase that dominates early tabular Q-Learning.
 
 {% include figure.liquid loading="lazy" path="assets/img/projects/rl_q_comparison.png" class="img-fluid rounded z-depth-1" zoomable=true caption="Standard Q-Learning vs. LLM-shaped Q-Learning over a 100-episode evaluation window." %}
 
-Evaluation is deliberately run over a 100-episode window and reported three ways — raw reward per episode,
-cumulative reward (the "learning lead"), and per-episode score difference — because a single averaged number
+Evaluation is deliberately run over a 100-episode window and reported three ways, as raw reward per episode,
+cumulative reward (the "learning lead"), and per-episode score difference, because a single averaged number
 hides how uneven the advantage is across episodes.
 
 ## Stack

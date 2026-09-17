@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Submitted my bachelor's thesis, [instance segmentation of medical equipment in hospital environments]({{ '/projects/medical-equipment-instance-segmentation/' | relative_url }}) — **graded 9.5/10**.
+Submitted my bachelor's thesis, [instance segmentation of medical equipment in hospital environments]({{ '/projects/medical-equipment-instance-segmentation/' | relative_url }}), **graded 9.5/10**.

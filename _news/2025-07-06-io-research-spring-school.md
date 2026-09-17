@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Completed the IO Research Spring School 2025 — 14 modules and 20+ hours on research methodology, academic writing, and research ethics in Computer Science.
+Completed the IO Research Spring School 2025, 14 modules and 20+ hours on research methodology, academic writing, and research ethics in Computer Science.

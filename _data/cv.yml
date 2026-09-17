@@ -51,13 +51,14 @@ cv:
     
     Projects:
       - name: Instance Segmentation of Medical Equipment in Hospital Environments
-        summary: "*Graduation Thesis · July 2026 – present.* PyTorch, Cascade Mask R-CNN, HTC, YOLO, Vision Transformers."
+        summary: "*Graduation Thesis · July 2026, graded 9.5/10.* PyTorch, Cascade Mask R-CNN, HTC, YOLO, Vision Transformers."
         start_date: 2026-07
-        end_date: present
+        end_date: 2026-07
         highlights:
-          - Engineered and processed the HAMP dataset, specifically designed for detecting and segmenting medical equipment within complex hospital environments.
-          - Benchmarked state-of-the-art architectures (Cascade Mask R-CNN, HTC, Mask R-CNN, YOLOv8/v11) with modern backbones (e.g., ConvNeXt, PVT) across 30+ configurations to evaluate the accuracy-efficiency tradeoff.
-          - Achieved peak instance segmentation performance (mAP 57.4) using Hybrid Task Cascade with ConvNeXtv2-L, while analyzing FLOPs and FPS metrics for potential real-world healthcare deployment.
+          - Engineered and processed the HAMP dataset (40 categories, 2,864 images), specifically designed for detecting and segmenting medical equipment within complex hospital environments.
+          - Benchmarked 42 configurations of state-of-the-art architectures (Mask R-CNN, Cascade Mask R-CNN, HTC, YOLOv8/v11) across ConvNeXt, ConvNeXtv2, PVT and ResNet backbones, scoring mAP, FLOPs and FPS together.
+          - Established the accuracy ceiling at 57.4 mAP (Hybrid Task Cascade with ConvNeXtv2-L), then ruled it out for deployment, since 250M parameters and 1.0 FPS cannot support real-time robotic navigation.
+          - Selected Mask R-CNN with ConvNeXt-T as the deployable configuration (50.3 mAP, 47.88M parameters, 5.4 FPS) through Pareto analysis of accuracy against latency, retaining 25.8 mAP on small objects, nearly double the best single-stage model (13.6).
 
       - name: LLM-Guided Reinforcement Learning Agent
         summary: "*December 2025.* Python, Gymnasium, Gemini API, Prompt Engineering."
