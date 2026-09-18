@@ -17,12 +17,12 @@ cv:
     - network: LinkedIn
       username: vudieuminh
 
+  # Only set the keys you want shown. Liquid treats "" as truthy, so an empty
+  # string still prints its separator: the CV page rendered "Location , ," until
+  # street/postalCode/countryCode were dropped rather than left blank.
   address:
-    street: ""
-    city: ""
-    region: ""
-    postalCode: ""
-    countryCode: ""
+    city: Ho Chi Minh City
+    region: Vietnam
 
   sections:
     Education:
