@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Thiệp mời Lễ Tốt nghiệp · Vũ Diệu Minh</title>
+<meta name="description" content="Thiệp mời Lễ Tốt nghiệp Đại học của Vũ Diệu Minh — 12:00, Chủ Nhật 29/11/2026, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM." />
+<meta name="theme-color" content="#0b1026" />
+
+<!-- Open Graph: để link hiển thị đẹp khi gửi qua Zalo/Messenger -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://minhdieuvu08.github.io/invitation/" />
+<meta property="og:title" content="Thiệp mời Lễ Tốt nghiệp · Vũ Diệu Minh" />
+<meta property="og:description" content="12:00 · Chủ Nhật 29.11.2026 · 227 Nguyễn Văn Cừ, Q.5, TP.HCM" />
+<meta property="og:image" content="https://minhdieuvu08.github.io/invitation/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Thiệp mời Lễ Tốt Nghiệp - Vũ Diệu Minh" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://minhdieuvu08.github.io/invitation/og-image.png" />
+
+<!-- Favicon dạng emoji (không cần file ngoài) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
+
+<!-- Typography: Plus Jakarta Sans (sans-serif hiện đại) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<style>
+/* =====================================================================
+   1. DESIGN TOKENS — Midnight Navy / Deep Indigo + Metallic Gold
+   ===================================================================== */
+:root{
+  --navy-950:#070b1c;
+  --navy-900:#0b1026;
+  --navy-800:#121a3a;
+  --indigo-700:#2a2f7a;
+  --indigo-500:#4f46e5;
+
+  --gold-300:#f6e7b4;
+  --gold-400:#e8cf8d;
+  --gold-500:#d4af37;
+  --gold-600:#b8912a;
+
+  /* Ivory / Champagne ấm — dùng cho bìa thiệp (tránh trắng ngả xám) */
+  --ivory:#fffdf5;
+  --ivory-100:#f8efdb;
+  --champagne:#eddcb4;
+  --champagne-600:#d9c08a;
+  /* Gold đậm cho viền foil — kim loại, không vàng chanh */
+  --foil-600:#a8822b;
+  --foil-700:#7d6020;
+
+  --text:#eef1ff;
+  --text-soft:#b9c0e0;
+  --text-dim:#8a92b8;
+
+  /* Glassmorphism */
+  --glass:rgba(255,255,255,.055);
+  --glass-strong:rgba(255,255,255,.09);
+  --glass-brd:rgba(255,255,255,.14);
+  --glass-shadow:0 18px 50px -18px rgba(3,6,20,.9);
+
+  --grad-gold:linear-gradient(100deg,var(--gold-600),var(--gold-300) 45%,var(--gold-500) 70%,var(--gold-400));
+  --grad-holo:linear-gradient(115deg,#7dd3fc,#c4b5fd 30%,#f9a8d4 55%,#fde68a 80%,#7dd3fc);
+
+  --r-lg:26px;
+  --r-md:18px;
+  --r-sm:12px;
+
+  --maxw:560px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+/* =====================================================================
+   2. RESET & BASE
+   ===================================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  color:var(--text);
+  background:var(--navy-950);
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+body.is-locked{overflow:hidden}          /* khoá scroll khi thiệp chưa mở */
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+a{color:inherit}
+
+/* Nền: gradient navy + 2 vầng sáng indigo/gold + lớp "lưới học thuật" */
+.bg{position:fixed;inset:0;z-index:-2;background:
+  radial-gradient(120% 80% at 50% -10%,#1b2356 0%,transparent 60%),
+  radial-gradient(90% 60% at 100% 100%,rgba(212,175,55,.14) 0%,transparent 60%),
+  linear-gradient(180deg,var(--navy-900),var(--navy-950) 70%)}
+.bg-grid{position:fixed;inset:0;z-index:-1;opacity:.35;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:44px 44px;
+  mask-image:radial-gradient(70% 55% at 50% 30%,#000 0%,transparent 85%);
+  -webkit-mask-image:radial-gradient(70% 55% at 50% 30%,#000 0%,transparent 85%)}
+
+/* =====================================================================
+   3. HELPERS
+   ===================================================================== */
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+.gold-text{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
+.eyebrow{
+  font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--gold-400);font-weight:600;margin:0 0 10px
+}
+.hr-orn{display:flex;align-items:center;justify-content:center;gap:12px;margin:22px 0}
+.hr-orn::before,.hr-orn::after{content:"";height:1px;width:56px;background:linear-gradient(90deg,transparent,var(--gold-500))}
+.hr-orn::after{background:linear-gradient(90deg,var(--gold-500),transparent)}
+.hr-orn span{color:var(--gold-500);font-size:.8rem}
+
+/* Thẻ kính (glass card) dùng lại cho mọi section */
+.card{
+  background:var(--glass);
+  border:1px solid var(--glass-brd);
+  border-radius:var(--r-lg);
+  box-shadow:var(--glass-shadow);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  padding:26px 22px;
+}
+
+/* Nút */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  width:100%;padding:14px 18px;border-radius:999px;
+  font-weight:600;font-size:.95rem;letter-spacing:.01em;
+  transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn:active{transform:scale(.97)}
+/* Nút gold: giữ nguyên gradient vàng gốc, chỉ tăng độ glow */
+.btn-gold{
+  background:var(--grad-gold);
+  color:#241c05;
+  box-shadow:0 12px 30px -12px rgba(212,175,55,.9);
+}
+.btn-gold:hover{box-shadow:0 16px 40px -12px rgba(212,175,55,1)}
+
+/* Nhịp đập + vòng sáng lan toả — dành cho nút mở thiệp */
+.btn-pulse{animation:btnPulse 2.2s ease-in-out infinite}
+@keyframes btnPulse{
+  0%,100%{
+    transform:scale(1);
+    box-shadow:0 12px 30px -12px rgba(212,175,55,.9),
+               0 0 0 0 rgba(246,231,180,.55);
+  }
+  50%{
+    transform:scale(1.04);
+    box-shadow:0 18px 44px -12px rgba(212,175,55,1),
+               0 0 0 14px rgba(246,231,180,0);
+  }
+}
+.btn-pulse:active{animation:none;transform:scale(.97)}   /* vẫn có phản hồi khi chạm */
+.btn-ghost{background:var(--glass-strong);border:1px solid var(--glass-brd);color:var(--text)}
+.btn-ghost:hover{background:rgba(255,255,255,.14)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-row{display:grid;gap:10px;margin-top:16px}
+@media(min-width:420px){.btn-row.two{grid-template-columns:1fr 1fr}}
+
+/* =====================================================================
+   4. ENVELOPE — hiệu ứng mở thiệp
+   ===================================================================== */
+#envelope{
+  position:fixed;inset:0;z-index:60;
+  display:grid;place-items:center;padding:24px;
+  background:
+    radial-gradient(65% 42% at 50% 38%,rgba(212,175,55,.13),transparent 70%),
+    radial-gradient(90% 60% at 50% 20%,#1a2250,transparent 65%),
+    linear-gradient(180deg,#0a0f24,#05081a);
+  transition:opacity .7s var(--ease),visibility .7s;
+}
+#envelope.is-open{opacity:0;visibility:hidden;pointer-events:none}
+
+.env-stage{width:100%;max-width:340px;text-align:center}
+
+/* Thân phong bì — giấy Ivory ấm, phủ champagne ánh kim + vệt sáng specular */
+.env{
+  position:relative;aspect-ratio:1.5/1;margin:0 auto 34px;
+  border-radius:16px;cursor:pointer;
+  background:
+    /* nếp gập 2 cánh dưới */
+    linear-gradient(to top right,rgba(140,110,45,.09) 49.6%,transparent 50%),
+    linear-gradient(to top left,rgba(140,110,45,.09) 49.6%,transparent 50%),
+    /* vệt sáng chéo (specular) → giấy có độ bóng satin */
+    linear-gradient(118deg,transparent 18%,rgba(255,255,255,.85) 33%,transparent 46%),
+    /* nền giấy ivory → champagne */
+    linear-gradient(158deg,var(--ivory) 0%,var(--ivory-100) 38%,var(--champagne) 72%,var(--champagne-600) 100%);
+  border:1px solid rgba(255,252,240,.85);
+  /* Bóng cực sâu → thiệp nổi bồng bềnh, tách hẳn khỏi nền navy + viền phát sáng gold.
+     2 animation chạy song song: float lo transform, envGlow lo box-shadow. */
+  box-shadow:
+    0 25px 50px -12px rgba(0,0,0,.7),
+    0 60px 90px -40px rgba(0,0,0,.8),
+    0 0 0 1px rgba(212,175,55,.5),
+    0 0 60px -10px rgba(212,175,55,.45),
+    inset 0 1px 0 rgba(255,255,255,.95),
+    inset 0 -16px 30px -16px rgba(170,140,60,.3);
+  animation:float 5s ease-in-out infinite, envGlow 3.6s ease-in-out infinite;
+}
+/* Viền gold foil hai đường chạy quanh trong lòng thiệp (kiểu thiệp cưới cao cấp) */
+.env::before{
+  content:"";position:absolute;inset:9px;border-radius:9px;z-index:5;
+  border:1px solid rgba(168,130,43,.55);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.55),           /* khe sáng ngoài đường foil */
+    inset 0 0 0 3px rgba(255,255,255,.3),
+    inset 0 0 0 4px rgba(168,130,43,.28);      /* đường foil thứ hai, mảnh hơn */
+  pointer-events:none;
+}
+/* Nắp phong bì (flap) */
+.env-flap{
+  position:absolute;left:0;right:0;top:0;height:62%;
+  background:linear-gradient(150deg,#fffdf6,#f1e8d4 58%,var(--champagne));
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  border-radius:16px 16px 0 0;
+  transform-origin:top center;
+  transition:transform .9s var(--ease);
+  filter:drop-shadow(0 3px 4px rgba(120,95,30,.35));  /* bám theo hình tam giác */
+  z-index:3;
+}
+.env.opening .env-flap{transform:rotateX(180deg)}
+/* Khi mở, ẩn viền foil để lá thiệp trượt qua không bị vạch kẻ cắt ngang */
+.env::before{transition:opacity .4s var(--ease)}
+.env.opening::before{opacity:0}
+/* Sáp niêm phong */
+.env-seal{
+  position:absolute;left:50%;top:52%;translate:-50% -50%;
+  width:62px;height:62px;border-radius:50%;z-index:4;
+  display:grid;place-items:center;
+  /* Trái tim dập nổi trên sáp gold */
+  font-size:1.65rem;line-height:1;
+  background:var(--grad-gold);
+  color:#7d6020;
+  text-shadow:0 1px 0 rgba(255,255,255,.55),0 -1px 1px rgba(90,65,10,.45);
+  box-shadow:
+    0 10px 26px -8px rgba(150,115,20,.8),
+    0 0 0 4px rgba(255,253,245,.75),
+    0 0 26px -4px rgba(212,175,55,.8),
+    inset 0 -3px 8px rgba(125,96,32,.45),
+    inset 0 2px 4px rgba(255,255,255,.5);
+  transition:transform .45s var(--ease),opacity .45s;
+}
+.env.opening .env-seal{transform:translate(-50%,-50%) scale(.3);opacity:0}
+/* Lá thiệp trượt ra — navy viền gold để tương phản với bìa ngọc trai */
+.env-letter{
+  position:absolute;left:8%;right:8%;bottom:10%;height:70%;
+  border-radius:12px;z-index:2;
+  background:linear-gradient(170deg,#1d2659,#0c1130);
+  border:1px solid rgba(212,175,55,.5);
+  box-shadow:
+    0 -8px 24px -10px rgba(0,0,0,.75),
+    0 0 30px -8px rgba(212,175,55,.45),
+    inset 0 1px 0 rgba(255,255,255,.12);
+  transition:transform 1s var(--ease) .25s;
+  display:grid;place-items:center;
+}
+.env-letter span{
+  font-size:1.9rem;filter:saturate(1.1) drop-shadow(0 4px 12px rgba(212,175,55,.5))
+}
+.env.opening .env-letter{transform:translateY(-54%) scale(1.04)}
+
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+/* Viền thiệp phát sáng mờ, nhịp đập nhè nhẹ */
+@keyframes envGlow{
+  0%,100%{
+    box-shadow:
+      0 25px 50px -12px rgba(0,0,0,.7),
+      0 60px 90px -40px rgba(0,0,0,.8),
+      0 0 0 1px rgba(212,175,55,.45),
+      0 0 45px -12px rgba(212,175,55,.4),
+      inset 0 1px 0 rgba(255,255,255,.95),
+      inset 0 -16px 30px -16px rgba(170,140,60,.3);
+  }
+  50%{
+    box-shadow:
+      0 25px 50px -12px rgba(0,0,0,.7),
+      0 60px 90px -40px rgba(0,0,0,.8),
+      0 0 0 1px rgba(246,231,180,.75),
+      0 0 90px -6px rgba(212,175,55,.8),
+      inset 0 1px 0 rgba(255,255,255,1),
+      inset 0 -16px 30px -16px rgba(170,140,60,.3);
+  }
+}
+
+.env-hint{color:var(--text-dim);font-size:.82rem;margin:14px 0 0}
+.env-title{font-size:1.05rem;font-weight:700;letter-spacing:.02em;margin:0 0 4px}
+/* Tên khách mời ghi trên phong bì (ẩn nếu chưa điền) */
+.env-to{margin:0 0 8px;font-size:.95rem;font-weight:600;color:var(--gold-300)}
+.env-to:empty{display:none}
+
+/* =====================================================================
+   5. REVEAL — nội dung thiệp xuất hiện dần
+   ===================================================================== */
+main{opacity:0;transition:opacity .6s var(--ease)}
+main.is-visible{opacity:1}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+
+/* =====================================================================
+   6. HERO
+   ===================================================================== */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:64px 0 40px;position:relative}
+.cap{font-size:3rem;line-height:1;margin-bottom:18px;filter:drop-shadow(0 10px 24px rgba(212,175,55,.35))}
+.hero h1{
+  font-size:clamp(2.5rem,13vw,3.9rem);
+  font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0;
+}
+.hero .degree{margin:14px 0 0;color:var(--text-soft);font-size:.95rem;font-weight:500}
+.hero .degree b{color:var(--gold-400);font-weight:600}
+.hero .degree span{display:block;margin-top:4px;font-size:.88rem;color:var(--text-dim)}
+/* Họ tên khách mời */
+.hero .guest{
+  font-size:clamp(1.3rem,6.2vw,1.65rem);font-weight:700;letter-spacing:-.01em;
+  margin:0;padding-bottom:6px;position:relative;
+}
+.hero .guest::after{
+  content:"";position:absolute;left:50%;bottom:0;translate:-50%;
+  width:46px;height:2px;border-radius:2px;background:var(--grad-gold);
+}
+.hero .guest-sub{margin:12px 0 16px;color:var(--text-dim);font-size:.86rem}
+.hero .invite{
+  margin:26px auto 0;max-width:420px;color:var(--text-soft);font-size:1rem;
+}
+.holo-chip{
+  display:inline-block;margin-bottom:22px;padding:7px 16px;border-radius:999px;
+  font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:#0b1026;background:var(--grad-holo);background-size:220% 100%;
+  animation:holo 7s linear infinite;
+}
+@keyframes holo{to{background-position:220% 0}}
+.scroll-cue{position:absolute;bottom:18px;left:50%;translate:-50%;color:var(--text-dim);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.55}50%{transform:translateY(6px);opacity:1}}
+
+/* =====================================================================
+   7. SECTIONS
+   ===================================================================== */
+section{padding:46px 0}
+.sec-head{text-align:center;margin-bottom:22px}
+.sec-head h2{font-size:1.45rem;font-weight:700;letter-spacing:-.01em;margin:0}
+.sec-head p{color:var(--text-dim);font-size:.9rem;margin:8px 0 0}
+
+/* --- Countdown --- */
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:22px}
+.cd-cell{
+  background:var(--glass-strong);border:1px solid var(--glass-brd);
+  border-radius:var(--r-md);padding:14px 4px;text-align:center;
+}
+.cd-num{
+  display:block;font-size:clamp(1.5rem,7vw,2.1rem);font-weight:800;
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em;
+  background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.cd-lab{display:block;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);margin-top:4px}
+.cd-done{text-align:center;font-weight:600;color:var(--gold-300);display:none}
+
+/* --- Info rows (thời gian / địa điểm) --- */
+.info-row{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,.1)}
+.info-row:last-of-type{border-bottom:0;padding-bottom:4px}
+.ico{
+  flex:none;width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(145deg,rgba(212,175,55,.22),rgba(212,175,55,.06));
+  border:1px solid rgba(212,175,55,.3);font-size:1.1rem;
+}
+.info-row .k{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-dim);margin:0 0 3px}
+.info-row .v{margin:0;font-weight:600;font-size:1.02rem}
+.info-row .v small{display:block;font-weight:400;font-size:.86rem;color:var(--text-soft);margin-top:3px;line-height:1.5}
+
+/* --- Map mock (không nhúng iframe để thiệp mở được offline) --- */
+.map-frame{
+  position:relative;height:160px;border-radius:var(--r-md);overflow:hidden;margin-bottom:18px;
+  border:1px solid var(--glass-brd);
+  background:
+    radial-gradient(circle at 62% 42%,rgba(212,175,55,.3),transparent 38%),
+    linear-gradient(135deg,#131a3d,#0a0f28);
+}
+.map-frame::before{
+  content:"";position:absolute;inset:0;opacity:.6;
+  background-image:
+    linear-gradient(rgba(125,211,252,.16) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(125,211,252,.16) 1px,transparent 1px);
+  background-size:30px 30px;
+}
+.map-pin{
+  position:absolute;left:62%;top:42%;translate:-50% -100%;
+  font-size:1.6rem;filter:drop-shadow(0 6px 10px rgba(0,0,0,.6));
+  animation:pin 2s ease-in-out infinite;
+}
+@keyframes pin{0%,100%{transform:translate(-50%,-100%)}50%{transform:translate(-50%,-115%)}}
+.map-label{
+  position:absolute;left:12px;bottom:12px;right:12px;
+  font-size:.78rem;color:var(--text-soft);
+  background:rgba(7,11,28,.72);border:1px solid var(--glass-brd);
+  padding:7px 11px;border-radius:10px;backdrop-filter:blur(6px);
+}
+
+/* --- Form gửi lời chúc --- */
+.field{margin-bottom:12px}
+.field label{display:block;font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-dim);margin-bottom:7px}
+.field input,.field textarea{
+  width:100%;padding:13px 15px;border-radius:var(--r-sm);
+  background:rgba(7,11,28,.55);border:1px solid var(--glass-brd);
+  color:var(--text);font:inherit;font-size:.95rem;
+  transition:border-color .2s,box-shadow .2s;
+}
+.field textarea{min-height:96px;resize:vertical}
+.field input::placeholder,.field textarea::placeholder{color:var(--text-dim)}
+.field input:focus,.field textarea:focus{
+  outline:none;border-color:var(--gold-500);
+  box-shadow:0 0 0 3px rgba(212,175,55,.16)
+}
+.counter{text-align:right;font-size:.72rem;color:var(--text-dim);margin-top:-4px}
+
+/* --- Danh sách lời chúc --- */
+.wishes{margin-top:22px;display:grid;gap:10px}
+.wishes:empty{display:none}
+.wish{
+  background:var(--glass);border:1px solid var(--glass-brd);
+  border-left:3px solid var(--gold-500);
+  border-radius:14px;padding:13px 15px;
+  animation:pop .45s var(--ease) both;
+}
+@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.wish .who{font-weight:700;font-size:.9rem;color:var(--gold-300)}
+.wish .msg{margin:4px 0 0;font-size:.92rem;color:var(--text-soft);white-space:pre-wrap;word-break:break-word}
+.wish .when{display:block;font-size:.7rem;color:var(--text-dim);margin-top:6px}
+.wishes-head{display:flex;align-items:center;justify-content:space-between;margin-top:26px}
+.wishes-head h3{font-size:.95rem;margin:0;font-weight:700}
+.wishes-head button{font-size:.76rem;color:var(--text-dim);text-decoration:underline}
+
+/* --- Footer --- */
+footer{text-align:center;padding:40px 0 56px;color:var(--text-dim);font-size:.82rem}
+footer .sig{font-size:1.15rem;font-weight:700;color:var(--text);margin:10px 0 4px}
+
+/* =====================================================================
+   8. TOAST & MODAL
+   ===================================================================== */
+#toast{
+  position:fixed;left:50%;bottom:26px;translate:-50% 120%;z-index:90;
+  max-width:88vw;padding:12px 20px;border-radius:999px;
+  background:rgba(10,14,34,.92);border:1px solid var(--glass-brd);
+  color:var(--text);font-size:.88rem;font-weight:500;
+  box-shadow:0 16px 40px -14px #000;backdrop-filter:blur(10px);
+  transition:translate .45s var(--ease);
+}
+#toast.show{translate:-50% 0}
+
+#modal{
+  position:fixed;inset:0;z-index:95;display:grid;place-items:center;padding:24px;
+  background:rgba(4,7,20,.72);backdrop-filter:blur(6px);
+  opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s;
+}
+#modal.show{opacity:1;visibility:visible}
+.modal-box{
+  width:100%;max-width:360px;text-align:center;padding:30px 24px;
+  border-radius:var(--r-lg);
+  background:linear-gradient(160deg,rgba(28,35,80,.95),rgba(10,14,34,.95));
+  border:1px solid rgba(212,175,55,.32);
+  box-shadow:0 30px 70px -24px #000;
+  transform:scale(.92);transition:transform .35s var(--ease);
+}
+#modal.show .modal-box{transform:scale(1)}
+.modal-box .emoji{font-size:2.6rem}
+.modal-box h3{margin:10px 0 6px;font-size:1.2rem}
+.modal-box p{margin:0 0 20px;color:var(--text-soft);font-size:.92rem}
+
+/* =====================================================================
+   9. A11Y / MOTION
+   ===================================================================== */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+:focus-visible{outline:2px solid var(--gold-400);outline-offset:3px;border-radius:8px}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body class="is-locked">
+<div class="bg" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- =====================================================================
+     A. PHONG BÌ — màn hình mở đầu
+     ===================================================================== -->
+<div id="envelope">
+  <div class="env-stage">
+    <div class="env" id="envBody">
+      <div class="env-letter"><span>🎓</span></div>
+      <div class="env-flap"></div>
+      <div class="env-seal" aria-hidden="true">♥</div>
+    </div>
+
+    <p class="eyebrow">Graduation Celebration · 2026</p>
+    <p class="env-to" id="envTo"></p>
+    <p class="env-title">Bạn có một thiệp mời đang chờ 💌</p>
+    <button class="btn btn-gold btn-pulse" id="openBtn" style="max-width:260px;margin-top:18px">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M4 7l8 6 8-6"/></svg>
+      Nhấn để mở
+    </button>
+    <p class="env-hint">Thiệp mời dành riêng cho bạn · Nhớ bật âm lượng cảm xúc 🤍</p>
+  </div>
+</div>
+
+<!-- =====================================================================
+     B. NỘI DUNG THIỆP
+     ===================================================================== -->
+<main id="card">
+
+  <!-- ---------- HERO ---------- -->
+  <header class="hero wrap">
+    <span class="holo-chip">Class of 2026</span>
+    <div class="cap" aria-hidden="true">🎓</div>
+    <p class="eyebrow">Trân trọng kính mời</p>
+
+    <!-- Họ tên khách mời: sửa hằng GUEST ở phần script, hoặc thêm ?ten=... vào link -->
+    <p class="guest" id="guestName">Bạn</p>
+    <p class="guest-sub">tới chung vui Lễ Tốt nghiệp của</p>
+
+    <h1><span class="gold-text">Vũ Diệu Minh</span></h1>
+    <p class="degree">
+      Cử nhân <b>Toán – Tin học</b> · Khoa Toán – Tin học
+      <span>Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM</span>
+    </p>
+
+    <div class="hr-orn" aria-hidden="true"><span>✦</span></div>
+
+    <p class="invite">
+      Chào bạn 👋 Sau bao đêm deadline, bao trang giấy nháp và vô số dòng code,
+      mình đã chính thức chạm tay vào cột mốc <b>tốt nghiệp đại học</b>.
+      Niềm vui này sẽ trọn vẹn hơn nếu có bạn ở đó đến chung vui,
+      chụp vài tấm hình và ôm mình một cái nhé!
+    </p>
+
+    <div class="btn-row two" style="max-width:420px;width:100%">
+      <button class="btn btn-gold" id="heroRsvp">Gửi lời chúc ✨</button>
+      <button class="btn btn-ghost" id="heroCal">Lưu lịch hẹn</button>
+    </div>
+
+    <span class="scroll-cue" aria-hidden="true">Cuộn xuống</span>
+  </header>
+
+  <!-- ---------- COUNTDOWN + THỜI GIAN ---------- -->
+  <section class="wrap reveal" id="sec-time">
+    <div class="sec-head">
+      <p class="eyebrow">Save the date</p>
+      <h2>Còn bao lâu nữa?</h2>
+      <p>Đếm ngược tới giờ nhận bằng</p>
+    </div>
+
+    <div class="card">
+      <!-- Live countdown -->
+      <div class="countdown" id="countdown" role="timer" aria-live="polite" aria-label="Đồng hồ đếm ngược">
+        <div class="cd-cell"><span class="cd-num" id="cd-d">00</span><span class="cd-lab">Ngày</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cd-h">00</span><span class="cd-lab">Giờ</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cd-m">00</span><span class="cd-lab">Phút</span></div>
+        <div class="cd-cell"><span class="cd-num" id="cd-s">00</span><span class="cd-lab">Giây</span></div>
+      </div>
+      <p class="cd-done" id="cdDone">🎉 Hôm nay chính là ngày đó, hẹn gặp bạn tại hội trường!</p>
+
+      <!-- Chi tiết thời gian -->
+      <div class="info-row">
+        <div class="ico" aria-hidden="true">🗓️</div>
+        <div>
+          <p class="k">Ngày</p>
+          <p class="v">Chủ Nhật, 29 tháng 11 năm 2026</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="ico" aria-hidden="true">⏰</div>
+        <div>
+          <p class="k">Giờ</p>
+          <p class="v">12:00 (giờ Việt Nam, GMT+7)</p>
+        </div>
+      </div>
+
+      <div class="btn-row two">
+        <button class="btn btn-gold" id="gcalBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M12 14v4M10 16h4"/></svg>
+          Thêm vào Google Calendar
+        </button>
+        <button class="btn btn-ghost" id="icsBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+          Tải file .ics (Apple/Outlook)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- ĐỊA ĐIỂM & BẢN ĐỒ ---------- -->
+  <section class="wrap reveal" id="sec-place">
+    <div class="sec-head">
+      <p class="eyebrow">Địa điểm</p>
+      <h2>Gặp nhau ở đâu?</h2>
+      <p>Cơ sở Nguyễn Văn Cừ</p>
+    </div>
+
+    <div class="card">
+      <!-- Bản đồ minh hoạ (bấm để mở Google Maps thật) -->
+      <div class="map-frame" id="mapMock" role="button" tabindex="0" aria-label="Mở Google Maps tới 227 Nguyễn Văn Cừ">
+        <span class="map-pin" aria-hidden="true">📍</span>
+        <span class="map-label">Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM · 10.7626, 106.6822</span>
+      </div>
+
+      <div class="info-row">
+        <div class="ico" aria-hidden="true">🏛️</div>
+        <div>
+          <p class="k">Trường</p>
+          <p class="v">Trường Đại học Khoa học Tự nhiên
+            <small>Đại học Quốc gia TP. Hồ Chí Minh</small>
+          </p>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="ico" aria-hidden="true">🧭</div>
+        <div>
+          <p class="k">Địa chỉ</p>
+          <p class="v">227 Nguyễn Văn Cừ
+            <small>Phường Chợ Quán, Quận 5, TP. Hồ Chí Minh</small>
+          </p>
+        </div>
+      </div>
+
+      <div class="btn-row two">
+        <button class="btn btn-gold" id="mapsBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Mở Google Maps
+        </button>
+        <button class="btn btn-ghost" id="copyAddr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+          Copy địa chỉ
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- LIÊN HỆ & CHIA SẺ ---------- -->
+  <section class="wrap reveal" id="sec-note">
+    <div class="card" style="text-align:center">
+      <p class="eyebrow">Liên hệ</p>
+      <p style="color:var(--text-soft);font-size:.92rem;margin:0 0 16px">
+        Có gì thắc mắc (hoặc bị lạc đường) thì nhắn mình ngay nhé!
+      </p>
+      <div class="btn-row two">
+        <a class="btn btn-ghost" id="telBtn" href="tel:+84000000000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.4 1.8.7 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.2a2 2 0 012.1-.5c.8.3 1.7.6 2.6.7a2 2 0 011.7 2z"/></svg>
+          Gọi cho mình
+        </a>
+        <button class="btn btn-ghost" id="copyPhone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+          Copy số điện thoại
+        </button>
+      </div>
+      <button class="btn btn-ghost" id="shareBtn" style="margin-top:10px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+        Chia sẻ thiệp này
+      </button>
+    </div>
+  </section>
+
+  <!-- ---------- GỬI LỜI CHÚC ---------- -->
+  <section class="wrap reveal" id="sec-wish">
+    <div class="sec-head">
+      <p class="eyebrow">Sổ lưu bút</p>
+      <h2>Gửi lời chúc cho mình 💌</h2>
+      <p>Mình sẽ đọc từng lời chúc một 🤍</p>
+    </div>
+
+    <div class="card">
+      <form id="wishForm" novalidate>
+        <div class="field">
+          <label for="wName">Tên của bạn</label>
+          <input id="wName" name="name" type="text" maxlength="40" placeholder="VD: Khánh Linh" autocomplete="name" required />
+        </div>
+        <div class="field">
+          <label for="wMsg">Lời chúc</label>
+          <textarea id="wMsg" name="msg" maxlength="300" placeholder="Chúc mừng tân cử nhân! Mong bạn luôn..." required></textarea>
+          <p class="counter"><span id="wCount">0</span>/300</p>
+        </div>
+        <button class="btn btn-gold" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          Gửi lời chúc
+        </button>
+      </form>
+
+      <div class="wishes-head" id="wishesHead" hidden>
+        <h3>Lời chúc đã gửi</h3>
+        <button type="button" id="clearWishes">Xoá tất cả</button>
+      </div>
+      <div class="wishes" id="wishList"></div>
+    </div>
+  </section>
+
+  <!-- ---------- FOOTER ---------- -->
+  <footer class="wrap reveal">
+    <div class="hr-orn" aria-hidden="true"><span>✦</span></div>
+    <p style="margin:0;color:var(--text-soft)">Cảm ơn bạn vì đã luôn ở đây 🤍</p>
+    <p class="sig gold-text">Vũ Diệu Minh</p>
+    <p style="margin:0">Hẹn gặp bạn ngày 29.11.2026</p>
+    <button class="btn btn-ghost" id="confettiBtn" style="max-width:220px;margin:20px auto 0">
+      🎊 Bắn pháo hoa giấy
+    </button>
+  </footer>
+</main>
+
+<!-- =====================================================================
+     C. TOAST & MODAL CẢM ƠN
+     ===================================================================== -->
+<div id="toast" role="status" aria-live="polite"></div>
+
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-box">
+    <div class="emoji" aria-hidden="true">🥹</div>
+    <h3 id="modalTitle">Cảm ơn bạn rất nhiều!</h3>
+    <p id="modalMsg">Lời chúc của bạn đã được mình cất vào sổ lưu bút. Hẹn gặp bạn ngày 29.11 nhé!</p>
+    <button class="btn btn-gold" id="modalClose">Đóng</button>
+  </div>
+</div>
+
+<!-- canvas-confetti qua CDN (tải bất đồng bộ, trang vẫn chạy nếu thiếu mạng) -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js" defer></script>
+
+<script>
+/* =====================================================================
+   CONFIG — sửa nhanh thông tin ở đây
+   ===================================================================== */
+
+/* 👉 HỌ TÊN KHÁCH MỜI — điền vào giữa 2 dấu nháy.
+   Để trống '' thì thiệp hiện chữ "Bạn".
+   Mẹo: không cần sửa file cho từng người, chỉ cần thêm ?ten=... vào link
+   (VD: .../index.html?ten=Nguyễn%20Văn%20A) — giá trị trên link sẽ ưu tiên. */
+const GUEST = '';
+
+const EVENT = {
+  title   : 'Lễ Tốt nghiệp Đại học — Vũ Diệu Minh',
+  details : 'Thân mời bạn đến chung vui Lễ Tốt nghiệp của Vũ Diệu Minh — Cử nhân Toán – Tin học, Khoa Toán – Tin học, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM.',
+  place   : 'Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM, 227 Nguyễn Văn Cừ, Phường Chợ Quán, Quận 5, TP.HCM',
+  address : '227 Nguyễn Văn Cừ, Phường Chợ Quán, Quận 5, TP.HCM',
+  phone   : '0982343173',               // 👉 thay bằng số thật của bạn
+  lat     : 10.762622,
+  lng     : 106.682180,
+  // 12:00 ngày 29/11/2026 giờ VN (GMT+7) → 05:00 UTC
+  startUTC: '20261129T050000Z',
+  endUTC  : '20261129T080000Z',
+  startISO: '2026-11-29T12:00:00+07:00'
+};
+const STORAGE_KEY = 'graduation-wishes-vdm';
+
+/* ---------------------------------------------------------------------
+   THU THẬP LỜI CHÚC qua Google Form (lời chúc sẽ về Google Sheets)
+   Cách lấy 3 giá trị dưới đây — xem hướng dẫn 5 bước ở cuối file.
+   Để action = '' thì tính năng tắt, lời chúc chỉ lưu trên máy khách.
+   --------------------------------------------------------------------- */
+const COLLECT = {
+  action    : 'https://docs.google.com/forms/d/e/1FAIpQLScvdaKTIdmW6NWiUbcGtq71fk0Ld1Uo1Jc8jmmkYLb6mu6aEw/formResponse',
+  entryName : 'entry.279795881',    // câu hỏi "Tên của bạn"
+  entryMsg  : 'entry.1497794992',   // câu hỏi "Lời chúc"
+  entryFrom : ''                    // (tuỳ chọn) ID câu hỏi "Thiệp gửi cho ai" — tự điền từ ?ten=
+};
+
+/* Rút gọn querySelector */
+const $  = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+/* =====================================================================
+   0. TÊN KHÁCH MỜI — ưu tiên ?ten= trên link, sau đó tới hằng GUEST
+   ===================================================================== */
+const guestName = (new URLSearchParams(location.search).get('ten') || GUEST || '').trim();
+
+if (guestName){
+  $('#guestName').textContent = guestName;        // dòng "Trân trọng kính mời <tên>"
+  $('#envTo').textContent = `Gửi: ${guestName}`;  // ghi trên phong bì
+  $('#wName').value = guestName;                  // điền sẵn ô tên ở sổ lưu bút
+  document.title = `Thiệp mời Lễ Tốt nghiệp · Gửi ${guestName}`;
+}
+
+/* =====================================================================
+   1. TOAST
+   ===================================================================== */
+let toastTimer;
+function toast(msg){
+  const el = $('#toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2600);
+}
+
+/* =====================================================================
+   2. CONFETTI (an toàn nếu CDN chưa/không tải được)
+   ===================================================================== */
+const GOLD = ['#d4af37','#f6e7b4','#e8cf8d','#ffffff','#7dd3fc','#c4b5fd'];
+function boom(power = 'normal'){
+  if (typeof confetti !== 'function') return;          // không có CDN → bỏ qua
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { confetti({ particleCount: 40, spread: 60, origin:{y:.6}, colors: GOLD }); return; }
+
+  if (power === 'big'){
+    // Bắn liên tục 1.2s từ 2 bên
+    const end = performance.now() + 1200;
+    (function frame(){
+      confetti({ particleCount:4, angle:60,  spread:70, origin:{x:0,y:.7}, colors:GOLD });
+      confetti({ particleCount:4, angle:120, spread:70, origin:{x:1,y:.7}, colors:GOLD });
+      if (performance.now() < end) requestAnimationFrame(frame);
+    })();
+    confetti({ particleCount:140, spread:95, startVelocity:48, origin:{y:.62}, colors:GOLD });
+  } else {
+    confetti({ particleCount:90, spread:75, origin:{y:.65}, colors:GOLD, scalar:.95 });
+  }
+}
+
+/* =====================================================================
+   3. MỞ PHONG BÌ
+   ===================================================================== */
+const envelope = $('#envelope');
+const cardMain = $('#card');
+let opened = false;
+
+function openCard(){
+  if (opened) return;
+  opened = true;
+  $('#envBody').classList.add('opening');          // lật nắp + trượt lá thiệp
+
+  setTimeout(() => {
+    envelope.classList.add('is-open');
+    document.body.classList.remove('is-locked');
+    cardMain.classList.add('is-visible');
+    boom('big');
+    revealOnScroll();                               // kích hoạt lần đầu
+  }, 950);
+}
+$('#openBtn').addEventListener('click', openCard);
+$('#envBody').addEventListener('click', openCard);
+
+/* =====================================================================
+   4. REVEAL KHI CUỘN
+   ===================================================================== */
+const revealEls = $$('.reveal');
+function revealOnScroll(){
+  const trigger = innerHeight * .88;
+  revealEls.forEach(el => {
+    if (el.getBoundingClientRect().top < trigger) el.classList.add('in');
+  });
+}
+if ('IntersectionObserver' in window){
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.12 });
+  revealEls.forEach(el => io.observe(el));
+} else {
+  addEventListener('scroll', revealOnScroll, { passive:true });
+}
+
+/* =====================================================================
+   5. COUNTDOWN TIMER
+   ===================================================================== */
+const target = new Date(EVENT.startISO).getTime();
+const pad = n => String(n).padStart(2,'0');
+let cdTimer;
+
+function tick(){
+  const diff = target - Date.now();
+
+  if (diff <= 0){
+    $('#countdown').style.display = 'none';
+    $('#cdDone').style.display = 'block';
+    clearInterval(cdTimer);
+    return;
+  }
+  const s = Math.floor(diff / 1000);
+  $('#cd-d').textContent = pad(Math.floor(s / 86400));
+  $('#cd-h').textContent = pad(Math.floor(s % 86400 / 3600));
+  $('#cd-m').textContent = pad(Math.floor(s % 3600 / 60));
+  $('#cd-s').textContent = pad(s % 60);
+}
+tick();
+cdTimer = setInterval(tick, 1000);
+
+/* =====================================================================
+   6. GOOGLE CALENDAR / .ICS / GOOGLE MAPS
+   ===================================================================== */
+function gcalUrl(){
+  const p = new URLSearchParams({
+    action  : 'TEMPLATE',
+    text    : EVENT.title,
+    dates   : `${EVENT.startUTC}/${EVENT.endUTC}`,
+    details : `${EVENT.details}\n\nThiệp mời: ${location.href}`,
+    location: EVENT.place,
+    ctz     : 'Asia/Ho_Chi_Minh'
+  });
+  return `https://calendar.google.com/calendar/render?${p}`;
+}
+function addToCalendar(){
+  window.open(gcalUrl(), '_blank', 'noopener');
+  toast('Đang mở Google Calendar…');
+}
+$('#gcalBtn').addEventListener('click', addToCalendar);
+$('#heroCal').addEventListener('click', addToCalendar);
+
+/* Tải file .ics cho Apple Calendar / Outlook */
+$('#icsBtn').addEventListener('click', () => {
+  const ics = [
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//VDM//Graduation 2026//VI','CALSCALE:GREGORIAN',
+    'BEGIN:VEVENT',
+    'UID:graduation-vdm-2026@invitation',
+    `DTSTAMP:${EVENT.startUTC}`,
+    `DTSTART:${EVENT.startUTC}`,
+    `DTEND:${EVENT.endUTC}`,
+    `SUMMARY:${EVENT.title}`,
+    `DESCRIPTION:${EVENT.details.replace(/[,;]/g, m => '\\' + m)}`,
+    `LOCATION:${EVENT.place.replace(/[,;]/g, m => '\\' + m)}`,
+    'BEGIN:VALARM','TRIGGER:-PT2H','ACTION:DISPLAY','DESCRIPTION:Lễ tốt nghiệp sắp bắt đầu','END:VALARM',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+
+  const url = URL.createObjectURL(new Blob([ics], { type:'text/calendar;charset=utf-8' }));
+  const a = Object.assign(document.createElement('a'), { href:url, download:'le-tot-nghiep-vu-dieu-minh.ics' });
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('Đã tải file lịch .ics 📅');
+});
+
+/* Google Maps — mở theo toạ độ + tên địa điểm */
+function openMaps(){
+  const q = encodeURIComponent(`${EVENT.lat},${EVENT.lng} (Trường ĐH Khoa học Tự nhiên - 227 Nguyễn Văn Cừ)`);
+  window.open(`https://www.google.com/maps/search/?api=1&query=${q}`, '_blank', 'noopener');
+  toast('Đang mở Google Maps…');
+}
+$('#mapsBtn').addEventListener('click', openMaps);
+$('#mapMock').addEventListener('click', openMaps);
+$('#mapMock').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openMaps(); } });
+
+/* =====================================================================
+   7. COPY (có fallback cho trình duyệt cũ / không HTTPS)
+   ===================================================================== */
+async function copy(text, okMsg){
+  try{
+    if (navigator.clipboard && isSecureContext){
+      await navigator.clipboard.writeText(text);
+    } else {
+      const ta = Object.assign(document.createElement('textarea'), { value:text });
+      ta.style.cssText = 'position:fixed;opacity:0';
+      document.body.append(ta); ta.select();
+      document.execCommand('copy'); ta.remove();
+    }
+    toast(okMsg);
+  } catch { toast('Không copy được, bạn chọn tay giúp mình nha 🙏'); }
+}
+$('#copyAddr').addEventListener('click',  () => copy(EVENT.address, 'Đã copy địa chỉ 📋'));
+$('#copyPhone').addEventListener('click', () => copy(EVENT.phone,   'Đã copy số điện thoại 📞'));
+
+/* Gán số điện thoại vào nút gọi + nhãn hiển thị */
+$('#telBtn').href = 'tel:' + EVENT.phone.replace(/\s/g,'');
+
+/* =====================================================================
+   8. CHIA SẺ THIỆP
+   ===================================================================== */
+$('#shareBtn').addEventListener('click', async () => {
+  const data = {
+    title: EVENT.title,
+    text : 'Mình tốt nghiệp rồi! Mời bạn xem thiệp nhé 🎓',
+    url  : location.href
+  };
+  if (navigator.share){
+    try { await navigator.share(data); return; } catch { /* user huỷ */ }
+  }
+  copy(location.href, 'Đã copy link thiệp — gửi cho bạn bè nhé 🔗');
+});
+
+/* =====================================================================
+   9. SỔ LƯU BÚT
+   - Lưu bản sao vào localStorage (để khách thấy lại lời chúc của mình)
+   - Đồng thời gửi về Google Form → Google Sheets của chủ thiệp
+   - Mất mạng thì xếp vào hàng chờ, tự gửi lại khi có mạng
+   ===================================================================== */
+const wishList = $('#wishList');
+const wishesHead = $('#wishesHead');
+
+/* Gửi lên Google Form. Chưa cấu hình COLLECT.action thì chỉ lưu máy khách. */
+async function pushToForm(w){
+  if (!COLLECT.action) return false;
+
+  const fd = new FormData();
+  fd.append(COLLECT.entryName, w.name);
+  fd.append(COLLECT.entryMsg,  w.msg);
+  if (COLLECT.entryFrom) fd.append(COLLECT.entryFrom, guestName || '(không rõ)');
+
+  // mode:'no-cors' → Google không trả CORS header, không đọc được response.
+  // Không throw tức là request đã đi; throw tức là mất mạng/bị chặn.
+  await fetch(COLLECT.action, { method:'POST', mode:'no-cors', body: fd });
+  return true;
+}
+
+/* Gửi lại những lời chúc còn kẹt trong hàng chờ */
+async function flushQueue(){
+  const items = loadWishes();
+  const pending = items.filter(w => w.sent === false);
+  if (!pending.length || !COLLECT.action) return;
+
+  let changed = false;
+  for (const w of pending){
+    try { if (await pushToForm(w)){ w.sent = true; changed = true; } }
+    catch { /* vẫn chưa có mạng, để lần sau */ }
+  }
+  if (changed){ saveWishes(items); renderWishes(); }
+}
+
+function loadWishes(){
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+  catch { return []; }
+}
+function saveWishes(arr){
+  try { localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); }
+  catch { toast('Thiết bị không cho lưu, nhưng mình vẫn nhận được tình cảm 🤍'); }
+}
+const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = ts => new Date(ts).toLocaleString('vi-VN', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
+
+function renderWishes(){
+  const items = loadWishes();
+  wishList.innerHTML = items.map(w => `
+    <article class="wish">
+      <span class="who">${esc(w.name)}</span>
+      <p class="msg">${esc(w.msg)}</p>
+      <span class="when">${fmt(w.at)}${w.sent === false ? ' · ⏳ chờ gửi' : ''}</span>
+    </article>`).join('');
+
+  wishesHead.hidden = items.length === 0;
+}
+renderWishes();
+flushQueue();                               // thử gửi lại hàng chờ khi mở thiệp
+addEventListener('online', flushQueue);     // …và ngay khi có mạng trở lại
+
+/* Đếm ký tự */
+$('#wMsg').addEventListener('input', e => { $('#wCount').textContent = e.target.value.length; });
+
+/* Submit */
+$('#wishForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.target;
+  const btn  = form.querySelector('button[type="submit"]');
+  const name = $('#wName').value.trim();
+  const msg  = $('#wMsg').value.trim();
+
+  if (!name){ toast('Bạn cho mình biết tên với 😄'); $('#wName').focus(); return; }
+  if (!msg) { toast('Viết cho mình vài chữ nha ✍️');  $('#wMsg').focus();  return; }
+
+  const wish = { name, msg, at: Date.now(), sent: !COLLECT.action };
+
+  // Chặn double-submit trong lúc gửi
+  btn.disabled = true;
+  const btnHtml = btn.innerHTML;
+  btn.textContent = 'Đang gửi…';
+
+  try { if (await pushToForm(wish)) wish.sent = true; }
+  catch { wish.sent = false; toast('Mạng đang yếu — lời chúc sẽ tự gửi lại sau ⏳'); }
+
+  const items = loadWishes();
+  items.unshift(wish);
+  saveWishes(items);
+  renderWishes();
+
+  form.reset();
+  $('#wCount').textContent = '0';
+  if (guestName) $('#wName').value = guestName;   // điền lại tên khách mời
+  btn.disabled = false;
+  btn.innerHTML = btnHtml;
+
+  boom('big');
+  openModal(name);
+});
+
+/* Xoá tất cả */
+$('#clearWishes').addEventListener('click', () => {
+  if (!confirm('Xoá toàn bộ lời chúc đã lưu trên thiết bị này?')) return;
+  localStorage.removeItem(STORAGE_KEY);
+  renderWishes();
+  toast('Đã xoá sổ lưu bút');
+});
+
+/* =====================================================================
+   10. MODAL CẢM ƠN
+   ===================================================================== */
+const modal = $('#modal');
+let lastFocus = null;
+
+function openModal(name){
+  $('#modalMsg').textContent =
+    `${name} ơi, lời chúc của bạn đã được cất vào sổ lưu bút của mình. Hẹn gặp bạn ngày 29.11 nhé!`;
+  lastFocus = document.activeElement;
+  modal.classList.add('show');
+  modal.setAttribute('aria-hidden','false');
+  $('#modalClose').focus();
+}
+function closeModal(){
+  modal.classList.remove('show');
+  modal.setAttribute('aria-hidden','true');
+  lastFocus?.focus();
+}
+$('#modalClose').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('show')) closeModal(); });
+
+/* =====================================================================
+   11. CÁC NÚT PHỤ
+   ===================================================================== */
+$('#heroRsvp').addEventListener('click', () => {
+  $('#sec-wish').scrollIntoView({ behavior:'smooth', block:'start' });
+  setTimeout(() => $('#wName').focus({ preventScroll:true }), 700);
+});
+$('#confettiBtn').addEventListener('click', () => { boom('big'); toast('Chúc mừng mình đi 🥳'); });
+
+/* =====================================================================
+   THU THẬP LỜI CHÚC — ĐÃ CẤU HÌNH XONG (xem hằng COLLECT ở đầu file)
+   ---------------------------------------------------------------------
+   Form đang dùng:
+     https://docs.google.com/forms/d/e/1FAIpQLScvdaKTIdmW6NWiUbcGtq71fk0Ld1Uo1Jc8jmmkYLb6mu6aEw/viewform
+   Xem lời chúc: mở form → tab "Câu trả lời" → biểu tượng Sheets.
+   Nên bật "Nhận thông báo qua email cho phản hồi mới" để được báo ngay.
+
+   Nếu sau này đổi form khác, lấy lại 3 giá trị như sau:
+     1. Tạo form với 2 câu hỏi "Trả lời ngắn": "Tên của bạn" và "Lời chúc".
+        Tab Cài đặt: TẮT "Giới hạn 1 phản hồi", không yêu cầu đăng nhập.
+     2. Menu ⋮ → "Lấy đường liên kết được điền trước" → điền tạm AAA/BBB
+        → "Lấy đường liên kết" → link trả về chứa ?entry.111=AAA&entry.222=BBB,
+        đó chính là entryName và entryMsg.
+     3. action = link form đó nhưng đổi "viewform?..." thành "formResponse".
+
+   Lưu ý: form công khai nên về lý thuyết có thể bị spam — nếu xảy ra,
+   chỉ cần tắt nhận phản hồi trong Google Form là xong.
+   ===================================================================== */
+</script>
+</body>
+</html>
