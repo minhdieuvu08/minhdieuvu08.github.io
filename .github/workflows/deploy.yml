@@ -74,7 +74,9 @@ jobs:
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          # "3.3" = luôn lấy bản 3.3.x mới nhất. Ghim cứng "3.3.5" sẽ hỏng khi
+          # ubuntu-latest đổi image (runner mới chỉ build patch release mới nhất).
+          ruby-version: "3.3"
           bundler-cache: true
       - name: Setup Python 🐍
         uses: actions/setup-python@v5
