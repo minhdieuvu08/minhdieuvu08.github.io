@@ -322,16 +322,18 @@ main.is-visible{opacity:1}
 .hero .degree{margin:14px 0 0;color:var(--text-soft);font-size:.95rem;font-weight:500}
 .hero .degree b{color:var(--gold-400);font-weight:600}
 .hero .degree span{display:block;margin-top:4px;font-size:.88rem;color:var(--text-dim)}
-/* Họ tên khách mời */
+/* Họ tên khách mời — cỡ chữ cân đối với tên chủ thiệp để thể hiện sự trân trọng */
 .hero .guest{
-  font-size:clamp(1.3rem,6.2vw,1.65rem);font-weight:700;letter-spacing:-.01em;
-  margin:0;padding-bottom:6px;position:relative;
+  font-size:clamp(1.9rem,8.4vw,2.6rem);font-weight:700;letter-spacing:-.015em;
+  line-height:1.18;color:#fffdf5;
+  margin:0;padding-bottom:12px;position:relative;
+  text-shadow:0 2px 18px rgba(212,175,55,.3);
 }
 .hero .guest::after{
   content:"";position:absolute;left:50%;bottom:0;translate:-50%;
-  width:46px;height:2px;border-radius:2px;background:var(--grad-gold);
+  width:72px;height:2px;border-radius:2px;background:var(--grad-gold);
 }
-.hero .guest-sub{margin:12px 0 16px;color:var(--text-dim);font-size:.86rem}
+.hero .guest-sub{margin:16px 0 18px;color:var(--text-dim);font-size:.9rem}
 .hero .invite{
   margin:26px auto 0;max-width:420px;color:var(--text-soft);font-size:1rem;
 }
@@ -425,21 +427,11 @@ section{padding:46px 0}
 .counter{text-align:right;font-size:.72rem;color:var(--text-dim);margin-top:-4px}
 
 /* --- Danh sách lời chúc --- */
-.wishes{margin-top:22px;display:grid;gap:10px}
-.wishes:empty{display:none}
-.wish{
-  background:var(--glass);border:1px solid var(--glass-brd);
-  border-left:3px solid var(--gold-500);
-  border-radius:14px;padding:13px 15px;
-  animation:pop .45s var(--ease) both;
+/* Ghi chú riêng tư dưới form */
+.wish-private{
+  margin:14px 0 0;text-align:center;
+  font-size:.78rem;color:var(--text-dim);
 }
-@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
-.wish .who{font-weight:700;font-size:.9rem;color:var(--gold-300)}
-.wish .msg{margin:4px 0 0;font-size:.92rem;color:var(--text-soft);white-space:pre-wrap;word-break:break-word}
-.wish .when{display:block;font-size:.7rem;color:var(--text-dim);margin-top:6px}
-.wishes-head{display:flex;align-items:center;justify-content:space-between;margin-top:26px}
-.wishes-head h3{font-size:.95rem;margin:0;font-weight:700}
-.wishes-head button{font-size:.76rem;color:var(--text-dim);text-decoration:underline}
 
 /* --- Footer --- */
 footer{text-align:center;padding:40px 0 56px;color:var(--text-dim);font-size:.82rem}
@@ -696,11 +688,9 @@ footer .sig{font-size:1.15rem;font-weight:700;color:var(--text);margin:10px 0 4p
         </button>
       </form>
 
-      <div class="wishes-head" id="wishesHead" hidden>
-        <h3>Lời chúc đã gửi</h3>
-        <button type="button" id="clearWishes">Xoá tất cả</button>
-      </div>
-      <div class="wishes" id="wishList"></div>
+      <!-- Lời chúc KHÔNG hiển thị lại trên trang: gửi thẳng về Google Form,
+           chỉ chủ thiệp đọc được. Khách chỉ thấy popup cảm ơn. -->
+      <p class="wish-private">🔒 Lời chúc được gửi riêng, chỉ mình đọc được</p>
     </div>
   </section>
 
@@ -981,13 +971,13 @@ $('#shareBtn').addEventListener('click', async () => {
 });
 
 /* =====================================================================
-   9. SỔ LƯU BÚT
-   - Lưu bản sao vào localStorage (để khách thấy lại lời chúc của mình)
-   - Đồng thời gửi về Google Form → Google Sheets của chủ thiệp
-   - Mất mạng thì xếp vào hàng chờ, tự gửi lại khi có mạng
+   9. SỔ LƯU BÚT — RIÊNG TƯ
+   - Lời chúc gửi thẳng về Google Form → Google Sheets, CHỈ chủ thiệp đọc.
+   - Không render lại trên trang: khách không thấy lời chúc của mình
+     lẫn của bất kỳ ai khác.
+   - localStorage chỉ dùng làm hàng chờ khi mất mạng (gửi lại khi có mạng),
+     không dùng để hiển thị.
    ===================================================================== */
-const wishList = $('#wishList');
-const wishesHead = $('#wishesHead');
 
 /* Gửi lên Google Form. Chưa cấu hình COLLECT.action thì chỉ lưu máy khách. */
 async function pushToForm(w){
@@ -1015,7 +1005,7 @@ async function flushQueue(){
     try { if (await pushToForm(w)){ w.sent = true; changed = true; } }
     catch { /* vẫn chưa có mạng, để lần sau */ }
   }
-  if (changed){ saveWishes(items); renderWishes(); }
+  if (changed) saveWishes(items);
 }
 
 function loadWishes(){
@@ -1026,23 +1016,15 @@ function saveWishes(arr){
   try { localStorage.setItem(STORAGE_KEY, JSON.stringify(arr)); }
   catch { toast('Thiết bị không cho lưu, nhưng mình vẫn nhận được tình cảm 🤍'); }
 }
-const esc = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const fmt = ts => new Date(ts).toLocaleString('vi-VN', { day:'2-digit', month:'2-digit', year:'numeric', hour:'2-digit', minute:'2-digit' });
-
-function renderWishes(){
-  const items = loadWishes();
-  wishList.innerHTML = items.map(w => `
-    <article class="wish">
-      <span class="who">${esc(w.name)}</span>
-      <p class="msg">${esc(w.msg)}</p>
-      <span class="when">${fmt(w.at)}${w.sent === false ? ' · ⏳ chờ gửi' : ''}</span>
-    </article>`).join('');
-
-  wishesHead.hidden = items.length === 0;
+/* Dọn hàng chờ: lời chúc đã gửi xong thì không cần giữ lại trên máy khách nữa */
+function pruneQueue(){
+  const pending = loadWishes().filter(w => w.sent === false);
+  if (pending.length) saveWishes(pending);
+  else localStorage.removeItem(STORAGE_KEY);
 }
-renderWishes();
-flushQueue();                               // thử gửi lại hàng chờ khi mở thiệp
-addEventListener('online', flushQueue);     // …và ngay khi có mạng trở lại
+
+flushQueue().then(pruneQueue);              // thử gửi lại hàng chờ khi mở thiệp
+addEventListener('online', () => flushQueue().then(pruneQueue));  // …và khi có mạng lại
 
 /* Đếm ký tự */
 $('#wMsg').addEventListener('input', e => { $('#wCount').textContent = e.target.value.length; });
@@ -1068,10 +1050,9 @@ $('#wishForm').addEventListener('submit', async e => {
   try { if (await pushToForm(wish)) wish.sent = true; }
   catch { wish.sent = false; toast('Mạng đang yếu — lời chúc sẽ tự gửi lại sau ⏳'); }
 
-  const items = loadWishes();
-  items.unshift(wish);
-  saveWishes(items);
-  renderWishes();
+  // Chỉ lưu lại khi CHƯA gửi được, để lần sau còn gửi lại.
+  // Gửi xong thì không giữ gì trên máy khách — lời chúc chỉ nằm ở Sheets của chủ thiệp.
+  if (!wish.sent) saveWishes([...loadWishes(), wish]);
 
   form.reset();
   $('#wCount').textContent = '0';
@@ -1081,14 +1062,6 @@ $('#wishForm').addEventListener('submit', async e => {
 
   boom('big');
   openModal(name);
-});
-
-/* Xoá tất cả */
-$('#clearWishes').addEventListener('click', () => {
-  if (!confirm('Xoá toàn bộ lời chúc đã lưu trên thiết bị này?')) return;
-  localStorage.removeItem(STORAGE_KEY);
-  renderWishes();
-  toast('Đã xoá sổ lưu bút');
 });
 
 /* =====================================================================
