@@ -768,7 +768,24 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 /* =====================================================================
    0. TÊN KHÁCH MỜI — ưu tiên ?ten= trên link, sau đó tới hằng GUEST
    ===================================================================== */
-const guestName = (new URLSearchParams(location.search).get('ten') || GUEST || '').trim();
+/* Làm sạch tên lấy từ link.
+   Zalo/Messenger/Instagram hay mã hoá lại dấu '%' khi người dùng dán link,
+   biến "Khánh%20Linh" thành "Khánh%2520Linh". URLSearchParams chỉ giải mã 1 lần
+   nên sẽ còn trơ lại "%20" trên màn hình. Ở đây giải mã lặp tới khi hết escape. */
+function cleanGuestName(raw){
+  let s = (raw || '').trim();
+  for (let i = 0; i < 4 && /%[0-9A-Fa-f]{2}/.test(s); i++){
+    let d;
+    try { d = decodeURIComponent(s); } catch { break; }   // link hỏng thì giữ nguyên
+    if (d === s) break;
+    s = d;
+  }
+  return s.replace(/\+/g, ' ')        // '+' lọt lưới khi app mã hoá thành %2B
+          .replace(/\s+/g, ' ')       // gộp khoảng trắng thừa
+          .trim();
+}
+
+const guestName = cleanGuestName(new URLSearchParams(location.search).get('ten') || GUEST);
 
 if (guestName){
   $('#guestName').textContent = guestName;        // dòng "Trân trọng kính mời <tên>"
