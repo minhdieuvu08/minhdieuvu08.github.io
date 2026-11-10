@@ -9,8 +9,18 @@
 
 <!-- Open Graph: để link hiển thị đẹp khi gửi qua Zalo/Messenger -->
 <meta property="og:type" content="website" />
+<meta property="og:url" content="https://minhdieuvu08.github.io/invitation/" />
 <meta property="og:title" content="Thiệp mời Lễ Tốt nghiệp · Vũ Diệu Minh" />
 <meta property="og:description" content="12:00 · Chủ Nhật 29.11.2026 · 227 Nguyễn Văn Cừ, Q.5, TP.HCM" />
+<meta property="og:image" content="https://minhdieuvu08.github.io/invitation/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Thiệp mời Lễ Tốt Nghiệp - Vũ Diệu Minh" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://minhdieuvu08.github.io/invitation/og-image.png" />
 
 <!-- Favicon dạng emoji (không cần file ngoài) -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>" />
@@ -430,7 +440,6 @@ section{padding:46px 0}
 .wishes-head{display:flex;align-items:center;justify-content:space-between;margin-top:26px}
 .wishes-head h3{font-size:.95rem;margin:0;font-weight:700}
 .wishes-head button{font-size:.76rem;color:var(--text-dim);text-decoration:underline}
-.wishes-empty{text-align:center;color:var(--text-dim);font-size:.86rem;margin-top:20px}
 
 /* --- Footer --- */
 footer{text-align:center;padding:40px 0 56px;color:var(--text-dim);font-size:.82rem}
@@ -532,7 +541,7 @@ footer .sig{font-size:1.15rem;font-weight:700;color:var(--text);margin:10px 0 4p
     <p class="invite">
       Chào bạn 👋 Sau bao đêm deadline, bao trang giấy nháp và vô số dòng code,
       mình đã chính thức chạm tay vào cột mốc <b>tốt nghiệp đại học</b>.
-      Niềm vui này sẽ trọn vẹn hơn nếu có bạn ở đó — đến chung vui,
+      Niềm vui này sẽ trọn vẹn hơn nếu có bạn ở đó đến chung vui,
       chụp vài tấm hình và ôm mình một cái nhé!
     </p>
 
@@ -560,7 +569,7 @@ footer .sig{font-size:1.15rem;font-weight:700;color:var(--text);margin:10px 0 4p
         <div class="cd-cell"><span class="cd-num" id="cd-m">00</span><span class="cd-lab">Phút</span></div>
         <div class="cd-cell"><span class="cd-num" id="cd-s">00</span><span class="cd-lab">Giây</span></div>
       </div>
-      <p class="cd-done" id="cdDone">🎉 Hôm nay chính là ngày đó — hẹn gặp bạn tại hội trường!</p>
+      <p class="cd-done" id="cdDone">🎉 Hôm nay chính là ngày đó, hẹn gặp bạn tại hội trường!</p>
 
       <!-- Chi tiết thời gian -->
       <div class="info-row">
@@ -596,7 +605,7 @@ footer .sig{font-size:1.15rem;font-weight:700;color:var(--text);margin:10px 0 4p
     <div class="sec-head">
       <p class="eyebrow">Địa điểm</p>
       <h2>Gặp nhau ở đâu?</h2>
-      <p>Cơ sở Nguyễn Văn Cừ — nơi mình đã học suốt 4 năm</p>
+      <p>Cơ sở Nguyễn Văn Cừ</p>
     </div>
 
     <div class="card">
@@ -692,7 +701,6 @@ footer .sig{font-size:1.15rem;font-weight:700;color:var(--text);margin:10px 0 4p
         <button type="button" id="clearWishes">Xoá tất cả</button>
       </div>
       <div class="wishes" id="wishList"></div>
-      <p class="wishes-empty" id="wishEmpty">Chưa có lời chúc nào — bạn là người đầu tiên nhé! 🌟</p>
     </div>
   </section>
 
@@ -741,7 +749,7 @@ const EVENT = {
   details : 'Thân mời bạn đến chung vui Lễ Tốt nghiệp của Vũ Diệu Minh — Cử nhân Toán – Tin học, Khoa Toán – Tin học, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM.',
   place   : 'Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM, 227 Nguyễn Văn Cừ, Phường Chợ Quán, Quận 5, TP.HCM',
   address : '227 Nguyễn Văn Cừ, Phường Chợ Quán, Quận 5, TP.HCM',
-  phone   : '0000 000 000',               // 👉 thay bằng số thật của bạn
+  phone   : '0982343173',               // 👉 thay bằng số thật của bạn
   lat     : 10.762622,
   lng     : 106.682180,
   // 12:00 ngày 29/11/2026 giờ VN (GMT+7) → 05:00 UTC
@@ -757,10 +765,10 @@ const STORAGE_KEY = 'graduation-wishes-vdm';
    Để action = '' thì tính năng tắt, lời chúc chỉ lưu trên máy khách.
    --------------------------------------------------------------------- */
 const COLLECT = {
-  action    : '',              // https://docs.google.com/forms/d/e/<FORM_ID>/formResponse
-  entryName : 'entry.0',       // ID câu hỏi "Tên của bạn"
-  entryMsg  : 'entry.0',       // ID câu hỏi "Lời chúc"
-  entryFrom : ''               // (tuỳ chọn) ID câu hỏi "Thiệp gửi cho ai" — tự điền từ ?ten=
+  action    : 'https://docs.google.com/forms/d/e/1FAIpQLScvdaKTIdmW6NWiUbcGtq71fk0Ld1Uo1Jc8jmmkYLb6mu6aEw/formResponse',
+  entryName : 'entry.279795881',    // câu hỏi "Tên của bạn"
+  entryMsg  : 'entry.1497794992',   // câu hỏi "Lời chúc"
+  entryFrom : ''                    // (tuỳ chọn) ID câu hỏi "Thiệp gửi cho ai" — tự điền từ ?ten=
 };
 
 /* Rút gọn querySelector */
@@ -979,7 +987,6 @@ $('#shareBtn').addEventListener('click', async () => {
    - Mất mạng thì xếp vào hàng chờ, tự gửi lại khi có mạng
    ===================================================================== */
 const wishList = $('#wishList');
-const wishEmpty = $('#wishEmpty');
 const wishesHead = $('#wishesHead');
 
 /* Gửi lên Google Form. Chưa cấu hình COLLECT.action thì chỉ lưu máy khách. */
@@ -1031,9 +1038,7 @@ function renderWishes(){
       <span class="when">${fmt(w.at)}${w.sent === false ? ' · ⏳ chờ gửi' : ''}</span>
     </article>`).join('');
 
-  const has = items.length > 0;
-  wishEmpty.hidden  = has;
-  wishesHead.hidden = !has;
+  wishesHead.hidden = items.length === 0;
 }
 renderWishes();
 flushQueue();                               // thử gửi lại hàng chờ khi mở thiệp
@@ -1119,24 +1124,20 @@ $('#heroRsvp').addEventListener('click', () => {
 $('#confettiBtn').addEventListener('click', () => { boom('big'); toast('Chúc mừng mình đi 🥳'); });
 
 /* =====================================================================
-   HƯỚNG DẪN BẬT THU THẬP LỜI CHÚC (làm 1 lần, ~3 phút)
+   THU THẬP LỜI CHÚC — ĐÃ CẤU HÌNH XONG (xem hằng COLLECT ở đầu file)
    ---------------------------------------------------------------------
-   1. Vào https://forms.new tạo form mới, thêm 2 câu hỏi kiểu "Trả lời ngắn":
-        - "Tên của bạn"
-        - "Lời chúc"            (có thể thêm câu thứ 3: "Thiệp gửi cho ai")
-      Ở tab Cài đặt, TẮT "Giới hạn 1 phản hồi" và không yêu cầu đăng nhập.
-   2. Menu ⋮ (góc trên phải) → "Lấy đường liên kết được điền trước".
-      Điền tạm: Tên = AAA, Lời chúc = BBB → bấm "Lấy đường liên kết" → Sao chép.
-   3. Link copy được có dạng:
-        https://docs.google.com/forms/d/e/1FAIpQLSxxxx/viewform?entry.111=AAA&entry.222=BBB
-      → entry.111 là ID của "Tên của bạn", entry.222 là ID của "Lời chúc".
-   4. Điền vào hằng COLLECT ở đầu file:
-        action    : 'https://docs.google.com/forms/d/e/1FAIpQLSxxxx/formResponse'
-                    (lấy link ở bước 3, đổi "viewform?..." thành "formResponse")
-        entryName : 'entry.111'
-        entryMsg  : 'entry.222'
-   5. Trong form, tab "Câu trả lời" → biểu tượng Sheets để xem/nhận lời chúc.
-      Bật "Nhận thông báo qua email cho phản hồi mới" nếu muốn báo ngay.
+   Form đang dùng:
+     https://docs.google.com/forms/d/e/1FAIpQLScvdaKTIdmW6NWiUbcGtq71fk0Ld1Uo1Jc8jmmkYLb6mu6aEw/viewform
+   Xem lời chúc: mở form → tab "Câu trả lời" → biểu tượng Sheets.
+   Nên bật "Nhận thông báo qua email cho phản hồi mới" để được báo ngay.
+
+   Nếu sau này đổi form khác, lấy lại 3 giá trị như sau:
+     1. Tạo form với 2 câu hỏi "Trả lời ngắn": "Tên của bạn" và "Lời chúc".
+        Tab Cài đặt: TẮT "Giới hạn 1 phản hồi", không yêu cầu đăng nhập.
+     2. Menu ⋮ → "Lấy đường liên kết được điền trước" → điền tạm AAA/BBB
+        → "Lấy đường liên kết" → link trả về chứa ?entry.111=AAA&entry.222=BBB,
+        đó chính là entryName và entryMsg.
+     3. action = link form đó nhưng đổi "viewform?..." thành "formResponse".
 
    Lưu ý: form công khai nên về lý thuyết có thể bị spam — nếu xảy ra,
    chỉ cần tắt nhận phản hồi trong Google Form là xong.
