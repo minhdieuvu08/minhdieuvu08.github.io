@@ -38,8 +38,8 @@
   --navy-950:#070b1c;
   --navy-900:#0b1026;
   --navy-800:#121a3a;
-  --indigo-700:#2a2f7a;
-  --indigo-500:#4f46e5;
+  --navy-700:#141c45;   /* navy cho vầng sáng nền — trầm, không ngả tím */
+  --navy-600:#1a2350;
 
   --gold-300:#f6e7b4;
   --gold-400:#e8cf8d;
@@ -95,9 +95,9 @@ img{max-width:100%;display:block}
 button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
 a{color:inherit}
 
-/* Nền: gradient navy + 2 vầng sáng indigo/gold + lớp "lưới học thuật" */
+/* Nền: gradient navy + 2 vầng sáng navy/gold + lớp "lưới học thuật" */
 .bg{position:fixed;inset:0;z-index:-2;background:
-  radial-gradient(120% 80% at 50% -10%,#1b2356 0%,transparent 60%),
+  radial-gradient(120% 80% at 50% -10%,var(--navy-700) 0%,transparent 60%),
   radial-gradient(90% 60% at 100% 100%,rgba(212,175,55,.14) 0%,transparent 60%),
   linear-gradient(180deg,var(--navy-900),var(--navy-950) 70%)}
 .bg-grid{position:fixed;inset:0;z-index:-1;opacity:.35;pointer-events:none;
@@ -179,7 +179,7 @@ a{color:inherit}
   display:grid;place-items:center;padding:24px;
   background:
     radial-gradient(65% 42% at 50% 38%,rgba(212,175,55,.13),transparent 70%),
-    radial-gradient(90% 60% at 50% 20%,#1a2250,transparent 65%),
+    radial-gradient(90% 60% at 50% 20%,var(--navy-600),transparent 65%),
     linear-gradient(180deg,#0a0f24,#05081a);
   transition:opacity .7s var(--ease),visibility .7s;
 }
@@ -337,6 +337,7 @@ main.is-visible{opacity:1}
 .hero .invite{
   margin:26px auto 0;max-width:420px;color:var(--text-soft);font-size:1rem;
 }
+/* Huy hiệu "Class of 2026": gradient holographic cầu vồng chạy chậm */
 .holo-chip{
   display:inline-block;margin-bottom:22px;padding:7px 16px;border-radius:999px;
   font-size:.72rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
@@ -392,8 +393,8 @@ section{padding:46px 0}
 .map-frame::before{
   content:"";position:absolute;inset:0;opacity:.6;
   background-image:
-    linear-gradient(rgba(125,211,252,.16) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(125,211,252,.16) 1px,transparent 1px);
+    linear-gradient(rgba(212,175,55,.14) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(212,175,55,.14) 1px,transparent 1px);
   background-size:30px 30px;
 }
 .map-pin{
@@ -809,7 +810,7 @@ function toast(msg){
 /* =====================================================================
    2. CONFETTI (an toàn nếu CDN chưa/không tải được)
    ===================================================================== */
-const GOLD = ['#d4af37','#f6e7b4','#e8cf8d','#ffffff','#7dd3fc','#c4b5fd'];
+const GOLD = ['#d4af37','#f6e7b4','#e8cf8d','#ffffff','#eddcb4','#a8822b'];
 function boom(power = 'normal'){
   if (typeof confetti !== 'function') return;          // không có CDN → bỏ qua
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
