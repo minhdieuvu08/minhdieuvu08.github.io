@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Thiệp mời Lễ Tốt nghiệp · Vũ Diệu Minh</title>
 <meta name="description" content="Thiệp mời Lễ Tốt nghiệp Đại học của Vũ Diệu Minh — 12:00, Chủ Nhật 29/11/2026, Trường ĐH Khoa học Tự nhiên, ĐHQG-HCM." />
-<meta name="theme-color" content="#0b1026" />
+<meta name="theme-color" content="#121b44" />
 
 <!-- Open Graph: để link hiển thị đẹp khi gửi qua Zalo/Messenger -->
 <meta property="og:type" content="website" />
@@ -35,11 +35,11 @@
    1. DESIGN TOKENS — Midnight Navy / Deep Indigo + Metallic Gold
    ===================================================================== */
 :root{
-  --navy-950:#070b1c;
-  --navy-900:#0b1026;
-  --navy-800:#121a3a;
-  --navy-700:#141c45;   /* navy cho vầng sáng nền — trầm, không ngả tím */
-  --navy-600:#1a2350;
+  --navy-950:#0b1328;   /* nền dưới cùng */
+  --navy-900:#121b44;   /* nền trên */
+  --navy-800:#1a2456;
+  --navy-700:#243173;   /* vầng sáng nền — xanh navy sáng, không ngả tím */
+  --navy-600:#2b3983;
 
   --gold-300:#f6e7b4;
   --gold-400:#e8cf8d;
@@ -57,7 +57,7 @@
 
   --text:#eef1ff;
   --text-soft:#b9c0e0;
-  --text-dim:#8a92b8;
+  --text-dim:#a3abcb;   /* nâng sáng theo nền mới để chữ nhỏ vẫn đạt tương phản AA */
 
   /* Glassmorphism */
   --glass:rgba(255,255,255,.055);
@@ -180,7 +180,7 @@ a{color:inherit}
   background:
     radial-gradient(65% 42% at 50% 38%,rgba(212,175,55,.13),transparent 70%),
     radial-gradient(90% 60% at 50% 20%,var(--navy-600),transparent 65%),
-    linear-gradient(180deg,#0a0f24,#05081a);
+    linear-gradient(180deg,#131c42,#0a1228);
   transition:opacity .7s var(--ease),visibility .7s;
 }
 #envelope.is-open{opacity:0;visibility:hidden;pointer-events:none}
